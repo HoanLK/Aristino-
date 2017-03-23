@@ -1,0 +1,42 @@
+﻿@font-face {
+    font-family: 'UVNMuaThu';
+    src: url('font/UVNMuaThu.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'UVNAiCap';
+    src: url('font/UVNAiCap.TTF') format('truetype');
+}
+
+body {
+    font-family: Verdana,sans-serif;
+    background: rgb(224,224,224);
+    padding: 0 !important;
+}
+
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: transparent !important;
+}

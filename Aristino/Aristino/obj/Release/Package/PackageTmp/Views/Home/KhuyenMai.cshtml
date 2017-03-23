@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "KhuyenMai";
+}
+
+<section class="trangkhuyenmai col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <article class="cackhuyenmai col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        @for (int i = 0; i < 4; i++)
+        {
+            if (i % 2 == 0)
+            {
+                <div class="khuyenmai col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img src="~/Content/images/khuyenmai/km-1.png" alt="" class="pull-left" />
+                    <div class="thongtin pull-right">
+                        <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <span>Khuyến mại khai trương</span><br />
+                            ****** <br />
+                            Ngày 08/03/2017, ARISTINO tưng bừng khai trương showroom 76 Nguyễn Đức Cảnh, Tp. Hải Phòng.
+                            ARISTINO gửi tới quý khách hàng hàng loạt ƯU ĐÃI hấp dẫn:
+                            <br />
+                        </p>
+                        <div class="xemthem col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <a href="#">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            else
+            {
+                <div class="khuyenmai col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img src="~/Content/images/khuyenmai/km-2.png" alt="" class="pull-right" />
+                    <div class="thongtin pull-left">
+                        <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <span>Couple Sale 14/2</span><br />
+                            ****** <br />
+                            Với mong muốn mang đến một mùa Valentine ấm áp bên cạnh người thân yêu ARISTINO gửi tặng quý khách hàng chương trình ưu đãi đặc biệt mang tên gọi “ Couple Sale – Off 50%” thay cho lời chúc ngọt ngào nhất tới các cặp đôi.
+                            <br />
+                        </p>
+                        <div class="xemthem col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <a href="#">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </article>
+</section>

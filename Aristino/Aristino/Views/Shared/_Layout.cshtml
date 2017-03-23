@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Aristino</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/_Layout.css" rel="stylesheet" />
+    <link href="~/Content/css/_DanhMucSanPham.css" rel="stylesheet" />
+    <link href="~/Content/css/_Banner.css" rel="stylesheet" />
+    <link href="~/Content/css/Menu-mobile.css" rel="stylesheet" />
+    <link href="~/Content/css/TrangChu.css" rel="stylesheet" />
+    <link href="~/Content/css/GioiThieu.css" rel="stylesheet" />
+    <link href="~/Content/css/KhuyenMai.css" rel="stylesheet" />
+    <link href="~/Content/css/BoSuuTap.css" rel="stylesheet" />
+    <link href="~/Content/css/BoSuuTap-details.css" rel="stylesheet" />
+    <link href="~/Content/css/BoSuuTap-topics.css" rel="stylesheet" />
+    <link href="~/Content/css/GiftForMen.css" rel="stylesheet" />
+    <link href="~/Content/css/Aristino360.css" rel="stylesheet" />
+    <link href="~/Content/css/BaiViet.css" rel="stylesheet" />
+    <link href="~/Content/css/SanPham.css" rel="stylesheet" />
+    <link href="~/Content/css/LoaiSanPham.css" rel="stylesheet" />
+    <link href="~/Content/css/ChiTietSanPham.css" rel="stylesheet" />
+
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Desktop-->
+        <div class="desktop hidden-xs hidden-sm col-md-12 col-lg-12">
+
+            <!--Menu-top-->
+            <div class="top col-md-12 col-lg-12">
+                <p class="pull-left"><span>Tư vấn 24/7: </span>(+84) 91 301 79 88</p>
+
+                <!--Menu-->
+                <ul class="menu pull-right">
+                    <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                    <li><a href="@Url.Action("About","Home")">Giới thiệu</a></li>
+                    <li><a href="@Url.Action("KhuyenMai","Home")">Khuyến mại</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!--Logo - Search - Hotline - Buy-->
+            <div class="mid col-md-12 col-lg-12">
+
+                <!--Logo-->
+                <a href="@Url.Action("Index","Home")" class="logo pull-left">
+                    <img src="~/Content/images/logo.png" alt="" class="img-responsive" />
+                </a>
+
+                <!--Tìm kiếm-->
+                <div class="timkiem pull-left">
+                    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm..." />
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+
+                <!--Hotline-->
+                <div class="hotline pull-left">
+                    <i class="fa fa-phone"></i>
+                    <p>
+                        Hỗ trợ <br />
+                        <span>091 301 79 88</span>
+                    </p>
+                </div>
+
+                <!--Giỏ hàng-->
+                <a class="buy pull-left">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>0 Sản phẩm</p>
+                </a>
+            </div>
+
+            <!--Bộ sưu tập - Gift - 360 - order-->
+            <div class="bot col-md-12 col-lg-12">
+                <ul>
+                    <li><a href="@Url.Action("BoSuuTap","Home")">Bộ sưu tập</a></li>
+                    <li><a href="@Url.Action("GiftForMen","Home")">Gift for men</a></li>
+                    <li><a href="@Url.Action("Aristino360","Home")">Aristino 360</a></li>
+                    <li><a href="@Url.Action("SanPham","Home")">Sản phẩm</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Mobile-->
+        <div class="mobile col-xs-12 col-sm-12 hidden-md hidden-lg">
+
+            <!--Thanh menu-->
+            <ul class="nav">
+                <li class="nav_icon nav_main" data-icon="menu"></li>
+                <li class="nav_title"><a href="tel:0913 017 998">0913 017 998</a></li>
+                @*<li class="giohang"><a href="#"><i class="fa fa-shopping-cart"></i><p>0</p></a></li>*@
+                <li class="nav_icon" data-nav="Search" data-icon="search"></li>
+            </ul>
+
+            <!--Menu sổ ra-->
+            <ul class="drawer">
+                <li><img src="~/Content/images/logo.png" class="img-responsive" /></li>
+                <li class="drawer_item drawer_itemActive"><a href="@Url.Action("Index","Home")" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li class="drawer_item"><a href="@Url.Action("KhuyenMai","Home")"><i class="fa fa-diamond"></i>Khuyến mại</a></li>
+                <li class="drawer_item"><a href="@Url.Action("SanPham","Home")"><i class="fa fa-shopping-cart"></i>Sản phẩm</a></li>
+                <li class="drawer_item"><a href="@Url.Action("BoSuuTap","Home")"><i class="fa fa-picture-o"></i>Bộ sưu tập</a></li>
+                <li class="drawer_item"><a href="@Url.Action("GiftForMen","Home")"><i class="fa fa-gift"></i>Gift for men</a></li>
+                <li class="drawer_item"><a href="@Url.Action("Aristino360","Home")"><i class="fa fa-newspaper-o"></i>Aristino 360</a></li>
+                <li class="drawer_item"><a href="@Url.Action("About","Home")"><i class="fa fa-vcard-o"></i>Giới thiệu</a></li>
+                <li class="drawer_item"><a href="@Url.Action("Contact","Home")"><i class="fa fa-phone"></i>Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Thông tin-->
+        <div class="thongtin col-xs-12 col-sm-7 col-md-5 col-lg-5">
+            <p class="tieude">SHOWROOM ARISTINO</p>
+            <p class="mota">
+                Chúng tôi cung cấp những sản phẩm thời trang nam nhãn hiệu Aristino chính hãng.
+                Lịch lãm và sang trọng, quý phái trong từng đường nét.
+            </p>
+            <hr />
+            <div class="diachi">
+                <p><span>Showroom Đà Nẵng: </span>số 1 Đà Nẵng, Ngô Quyền, Hải Phòng</p>
+                <p><span>Showroom Lạch Tray: </span>số 306 Lạch Tray, Ngô Quyền, Hải Phòng</p>
+                <p><span>Showroom Nguyễn Đức Cảnh: </span>số 76 Nguyễn Đức Cảnh, Hải Phòng</p>
+                <p><span>Hotline: </span>0913 017 998</p>
+            </div>
+        </div>
+
+        <!--Sản phẩm nổi bật-->
+        <div class="sanphamnoibat col-xs-12 col-sm-5 col-md-3 col-lg-3">
+            <p class="tieude">Sản phẩm nổi bật</p>
+            <div>
+                @for (int i = 0; i < 10; i++)
+                {
+                <a href="@Url.Action("LooaiSanPham","Home")">thời trang nam</a><span>,</span>
+                }
+            </div>
+        </div>
+
+        <!--Đăng ký - follow-->
+        <div class="dangky-follow col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+            <!--Đăng ký-->
+            <div class="dangky col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                <p>Đăng ký nhận thông tin khuyến mãi và ưu đãi của Aristino</p>
+                <form>
+                    <input type="text" placeholder="Nhập email của bạn ...." value="" />
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+
+            <!--Follow-->
+            <div class="follow col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                <p>Follow us on</p>
+                <div>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!--Design by-->
+        <p class="ktn col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            Design by <a href="http://www.ketnoitrejsc.com/">Kết Nối Trẻ JSC</a>
+        </p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/front/myScripts.js"></script>
+    <script src="~/Scripts/front/Menu-Mobile.js"></script>
+    <script src="~/Scripts/front/Script.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

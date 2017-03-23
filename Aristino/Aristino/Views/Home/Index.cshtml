@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section class="trangchu col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <!--Sologan-->
+    <div class="sologan hidden-xs col-sm-12 col-md-12 col-lg-12">
+        <img src="~/Content/images/dichvu.png" alt="" />
+    </div>
+
+    <!--khuyến mãi nổi bật-->
+    <article class="khuyenmainoibat col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--bài viết lớn bền trái (chỉ có ảnh dẫn link, k có tên bà viết)-->
+        <div class="left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <a href="#"><img src="~/Content/images/tintucnoibat-left.png" /></a>
+        </div>
+
+        <!--Các bài viết bên phải (có cả ảnh và tên bài viết)-->
+        <div class="right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+            <!--2 thông tin bên trên-->
+            @for (int i = 0; i < 2; i++)
+            {
+            <div class="up col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <a href="#">
+                    <img src="~/Content/images/khuyenmainoibat-right-up.png" alt="" />
+                    <div><p>Special Couple Sale</p></div>
+                </a>
+            </div>
+            }
+
+            <!--thông tin bên dưới-->
+            <div class="down col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a href="#">
+                    <img src="~/Content/images/khuyenmainoibat-right-up.png" alt="" />
+                    <div><p>Special Couple Sale</p></div>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!--Sản phẩm mới-->
+    <article class="sanphammoi col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Sản phẩm mới nhất</p>
+            <a href="@Url.Action("SanPham","Home")">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <!--Các sản phẩm-->
+        <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Sản phẩm-->
+            @for (int i = 0; i < 4; i++)
+            {
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="~/Content/images/sanphammoi.png" alt="" />
+                    <p>
+                        Áo sơ mi nam ARISTINO ALS17-MO53 <br />
+                        <span>750.000 đ</span>
+                    </p>
+
+                    <!--Nút mua hàng-->
+                    <div>
+                        <a href="@Url.Action("ChiTietSanPham","Home")">Chi tiết</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </article>
+
+    <!--Sản phẩm nổi bật-->
+    <article class="sanphamnoibat col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Sản phẩm nổi bật</p>
+            <a href="@Url.Action("SanPham","Home")">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <!--Các sản phẩm-->
+        <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Sản phẩm-->
+            @for (int i = 0; i < 4; i++)
+            {
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="~/Content/images/sanphamnoibat.png" alt="" />
+                    <p>
+                        Áo thun nam Aristino ATS17-40 <br />
+                        <span>250.000 đ</span>
+                    </p>
+
+                    <!--Nút mua hàng-->
+                    <div>
+                        <a href="@Url.Action("ChiTietSanPham","Home")">Chi tiết</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </article>
+
+    <!--Bộ sưu tập-->
+    <article class="bosutap col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Ảnh đại diện-->
+        <img src="~/Content/images/boosuutap.png" alt="" class="col-xs-12 col col-sm-5 col-md-8 col-lg-8 pull-right" />
+
+        <!--Thông tin-->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
+            <p>
+                <span>ARISTINO COLLECTION</span><br />
+                Cùng khám phá những bộ sưu tập lịch lãm, quý phái và vô cùng đặc sắc của Aristino Hải Phòng.
+            </p>
+
+            <!--Nút xem thêm-->
+            <a href="@Url.Action("BoSuuTap","Home")">Xem thêm</a>
+        </div>
+    </article>
+
+    <!--Gift for men-->
+    <article class="giftformen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <p>
+            <span>GIFTS FOR MEN</span><br />
+            Những món quà đầy ý nghĩa và sang trọng dành cho người đàn ông lịch lãm
+        </p>
+
+        <!--Các tabs-->
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab">ARISTINO PROFRESSIONAL</a></li>
+                <li role="presentation" style="margin-left: 5%; margin-right: 5%;"><a href="#care" aria-controls="care" role="tab" data-toggle="tab">ARISTINO CARE</a></li>
+                <li role="presentation"><a href="#card" aria-controls="card" role="tab" data-toggle="tab">ARISTINO GIFT CARD</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="pro">
+
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        @for (int i = 0; i < 4; i++)
+                        {
+                            <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <img src="~/Content/images/gift.png" alt="" />
+                                <p>
+                                    Bộ hộp quà Tencel GBLS16-03 <br />
+                                    <span>1.250.000 đ</span>
+                                </p>
+
+                                <!--Nút mua hàng-->
+                                <a href="@Url.Action("ChiTietSanPham","Home")">Chi tiết</a>
+                            </div>
+                        }
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="@Url.Action("GiftForMen","Home")">Xem thêm</a>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="care">
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        @for (int i = 0; i < 4; i++)
+                        {
+                            <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <img src="~/Content/images/gift.png" alt="" />
+                                <p>
+                                    Bộ hộp quà Tencel GBLS16-03 <br />
+                                    <span>1.250.000 đ</span>
+                                </p>
+
+                                <!--Nút mua hàng-->
+                                <a href="@Url.Action("ChiTietSanPham","Home")">Chi tiết</a>
+                            </div>
+                        }
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="@Url.Action("GiftForMen","Home")">Xem thêm</a>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="card">
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        @for (int i = 0; i < 4; i++)
+                        {
+                            <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <img src="~/Content/images/gift.png" alt="" />
+                                <p>
+                                    Bộ hộp quà Tencel GBLS16-03 <br />
+                                    <span>1.250.000 đ</span>
+                                </p>
+
+                                <!--Nút mua hàng-->
+                                <a href="@Url.Action("ChiTietSanPham","Home")">Chi tiết</a>
+                            </div>
+                        }
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="@Url.Action("GiftForMen","Home")">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Tin tức nổi bật (aristino 360)-->
+    <article class="tintucnoibat col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Tin tức nổi bật</p>
+            <a href="@Url.Action("Aristino360","Home")">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <div class="cactintuc col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <a href="@Url.Action("BaiViet","Home")">
+                    <img src="~/Content/images/tintucnoibat-right-up.png" alt="" />
+                    <p class="tieude">ARISTINO - TOP 100 THƯƠNG HIỆU SẢN PHẨM, DỊCH VỤ TIN & DÙNG VIỆT 2016</p>
+                    <p class="mota">ARISTINO lọt top 100 thương hiệu sản phẩm – dịch vụ Tin & Dùng Việt Nam 2016 được người tiêu dùng ưa chuộng và lựa chọn trên quy mô toàn quốc.</p>
+                </a>
+            </div>
+
+            <div class="right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                @for (int i = 0; i < 3; i++)
+                {
+                    <div class="baiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <img src="~/Content/images/tintucnoibat-right-up.png" alt="" class="pull-left" />
+                        <div class="thongtin pull-right">
+                            <p class="tieude">NÊN MUA GÌ CHO CHÀNG ĐÂY ?</p>
+                            <p class="mota">
+                                Sắp tới sinh nhật chàng rồi mà bạn vẫn chưa biết nên mua gì để tặng cho chàng. Sao bạn lại không đến với chúng tôi Aristino...
+                                <a href="@Url.Action("BaiViet","Home")" class="xemthem">Xem thêm</a>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </article>
+</section>

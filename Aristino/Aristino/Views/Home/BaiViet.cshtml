@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "BaiViet";
+}
+
+<section class="trangbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <!--Nội dung bài viét-->
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="tieude">Khai trương showroom Aristino 76 Nguyễn Đức Cảnh</p>
+        <p class="ngaydang">Ngày đăng: 8/3/2017</p>
+        <div class="noidung col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img src="~/Content/images/khuyenmai/km-1.png" alt="" />
+            <p>
+                Ngày 08/03/2017, ARISTINO tưng bừng khai trương showroom 76 Nguyễn Đức Cảnh, Tp. Hải Phòng.
+                ARISTINO gửi tới quý khách hàng hàng loạt ƯU ĐÃI hấp dẫn: <br />
+                <br />
+                + Ưu đãi 50% các sản phẩm thu đông và sơ mi cao cấp (Áp dụng với một số mã trong danh mục) <br />
+                + Ưu đãi 20% toàn bộ sản phẩm mới và quần Âu, quần Khaki (trừ sịp và tất)<br />
+                <br />
+                *Thời gian áp dụng: Từ 08/03 - 14/03/2017 <br />
+                *Chương trình không áp dụng cùng các chương trình ưu đãi khác.<br />
+                *Lưu ý: Ưu đãi chỉ áp dụng tại showroom 76, Nguyễn Đức Cảnh, Tp. Hải Phòng.<br />
+                <br />
+                Tự hào với chất lượng sản phẩm của mình, ARISTINO mang đến những sản phẩm thời trang đẳng cấp được thiết kế tinh tế với chất liệu thương hạng, đặc biệt phù hợp với khí hậu Việt Nam. Hãy cùng tới ARISTINO 76, Nguyễn Đức Cảnh, Tp. Hải Phòng ngay hôm nay và nhận những quà tặng hấp dẫn từ chúng tôi!<br />
+                <br />
+                <br />
+                Thông tin chi tiết liên hệ: <br />
+                Hotline: 0945.650.666 <br />
+                Fanpage: <a href="https://www.facebook.com/Aristino.HP">https://www.facebook.com/Aristino.HP</a>
+            </p>
+        </div>
+        <div class="like col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>* Like Fanpage để liên tục cập nhật ƯU ĐÃI từ ARISTINO.</p>
+
+        </div>
+        <hr />
+    </article>
+
+    <!--Các bài viết khác-->
+    <div class="baivietkhac col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p>Bài viết khác</p>
+
+        <!--Các bài viết-->
+        <div class="cacbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            @for (int i = 0; i < 6; i++)
+            {
+            <div class="baiviet col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <a href="@Url.Action("BaiViet", "Home")">
+                    <img src="~/Content/images/khuyenmai/km-2.png" alt="" />
+                    <p>Khai trương Aristino 1789 đại lộ Hùng Vương, tp Việt Trì</p>
+                </a>
+            </div>
+            }
+        </div>
+    </div>
+</section>

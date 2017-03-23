@@ -1,0 +1,151 @@
+﻿/*Trang bai viet cua bo suu tap*/
+.trangbosuutaptopics {
+    margin: 2em 0 0 0;
+}
+
+    /*Tieu de trang*/
+    .trangbosuutaptopics > .tieude {
+        font-family: UVNAiCap;
+        text-align: center;
+        font-size: 1.3em;
+        margin: 0 0 2em 0;
+    }
+
+        .trangbosuutaptopics > .tieude > span {
+            font-family: UVNMuaThu;
+            font-size: 2em;
+        }
+
+    /*Slide anh*/
+    .trangbosuutaptopics > .carousel {
+        margin: 0 6em;
+        height: 75vh;
+    }
+
+        .trangbosuutaptopics > .carousel > .carousel-inner {
+            height: 100%;
+        }
+
+            .trangbosuutaptopics > .carousel > .carousel-inner > .item {
+                height: 100%;
+            }
+
+                .trangbosuutaptopics > .carousel > .carousel-inner > .item > img {
+                    height: 100%;
+                    margin: 0 auto;
+                }
+
+    /*Cac bo anh cung bo su tap*/
+    .trangbosuutaptopics > .cacbotuongtu {
+        margin: 5em 0 3em 0;
+    }
+
+        .trangbosuutaptopics > .cacbotuongtu > .botuongtu {
+            text-align: center;
+        }
+
+            .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a {
+                text-decoration: none;
+                display: block;
+                padding: 1em 0 3em 0;
+                transition: all .3s ease-in-out;
+            }
+
+                .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a:hover {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+
+                .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > .tieude {
+                    font-family: UVNAiCap;
+                    font-size: 1.2em;
+                }
+
+                    .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > .tieude > span {
+                        font-family: UVNMuaThu;
+                        font-size: 1.6em;
+                    }
+
+                .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > img {
+                    height: 20em;
+                }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*Trang bai viet cua bo suu tap*/
+    .trangbosuutaptopics {
+        margin: 6em 0 0 0;
+    }
+
+        /*Tieu de trang*/
+        .trangbosuutaptopics > .tieude {
+            font-size: 1.5em;
+        }
+
+        /*Slide anh*/
+        .trangbosuutaptopics > .carousel {
+            margin: 0;
+            height: 50vh;
+        }
+
+        /*Cac bo anh cung bo su tap*/
+        .trangbosuutaptopics > .cacbotuongtu {
+            margin: 5em 0 0;
+        }
+
+            .trangbosuutaptopics > .cacbotuongtu > .botuongtu {
+                text-align: center;
+                margin: 0 0 5em 0;
+            }
+
+                .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a {
+                    padding: 1em 0 3em 0;
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+
+                    .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > .tieude {
+                        font-size: 1.3em;
+                        padding: 0 3em;
+                    }
+
+                        .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > .tieude > span {
+                            font-size: 2em;
+                        }
+
+                    .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a > img {
+                        height: 30em;
+                    }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    /*Trang bai viet cua bo suu tap*/
+    .trangbosuutaptopics {
+        margin: 6em 0 0 0;
+        padding: 0;
+    }
+
+        /*Tieu de trang*/
+        .trangbosuutaptopics > .tieude {
+            font-size: 1.1em;
+        }
+
+        /*Slide anh*/
+        .trangbosuutaptopics > .carousel {
+            margin: 0;
+            height: 50vh;
+        }
+
+        /*Cac bo anh cung bo su tap*/
+        .trangbosuutaptopics > .cacbotuongtu {
+            margin: 5em 0 0;
+            padding: 0;
+        }
+
+            .trangbosuutaptopics > .cacbotuongtu > .botuongtu {
+                margin: 0 0 4em;
+            }
+
+                .trangbosuutaptopics > .cacbotuongtu > .botuongtu > a {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+}

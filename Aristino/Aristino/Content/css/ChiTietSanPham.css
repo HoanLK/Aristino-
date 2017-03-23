@@ -1,0 +1,280 @@
+﻿.trangchitietsanpham {
+    margin: 0;
+    padding: 0;
+}
+
+    .trangchitietsanpham > article {
+        height: 1%;
+        overflow: hidden;
+    }
+
+        .trangchitietsanpham > article > .thongtinsp {
+        }
+
+            /*Phần ảnh sản phẩm*/
+            .trangchitietsanpham > article > .thongtinsp > .anh {
+            }
+
+                .trangchitietsanpham > article > .thongtinsp > .anh > .img {
+                    text-align: center;
+                    margin: 0 0 1em 0;
+                    padding: 0 0.5em;
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .anh > .img > img {
+                        width: 100%;
+                        padding: 0 8em;
+                        border: solid 1px rgb(150,150,150);
+                    }
+
+                .trangchitietsanpham > article > .thongtinsp > .anh > .sub {
+                    padding: 0;
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .anh > .sub > div {
+                        padding: 0 0.5em;
+                    }
+
+                        .trangchitietsanpham > article > .thongtinsp > .anh > .sub > div > img {
+                            width: 100%;
+                            border: solid 1px rgb(150,150,150);
+                            cursor: pointer;
+                        }
+
+            /*Thông tin sản phẩm*/
+            .trangchitietsanpham > article > .thongtinsp > .thongtin {
+            }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .tieude {
+                    margin: 0;
+                    font-weight: bold;
+                    color: rgb(21,101,192);
+                    font-size: 1.5em;
+                }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .masanpham {
+                    margin: 0;
+                }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .tinhtrang {
+                    color: rgb(211,47,47);
+                    margin: 0.5em 0;
+                }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .gia {
+                    margin: 0;
+                    font-size: 1.3em;
+                }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .mota {
+                    margin: 1em 0;
+                    line-height: 1.7em;
+                    letter-spacing: 0.7px;
+                }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .size {
+                    margin: 1em 0;
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .thongtin > .size > p {
+                        margin: 0;
+                    }
+
+                    .trangchitietsanpham > article > .thongtinsp > .thongtin > .size > ul {
+                        height: 1%;
+                        overflow: hidden;
+                        margin: 0.5em 0;
+                    }
+
+                        .trangchitietsanpham > article > .thongtinsp > .thongtin > .size > ul > li {
+                            float: left;
+                        }
+
+                            .trangchitietsanpham > article > .thongtinsp > .thongtin > .size > ul > li > a {
+                                display: block;
+                                padding: 0.5em;
+                                margin: 0 1em 0 0;
+                                border: solid 1px rgb(100,100,100);
+                                text-decoration: none;
+                                color: rgb(100,100,10);
+                            }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .soluong {
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .thongtin > .soluong > p {
+                        margin: 0 0 0.5em 0;
+                    }
+
+                    .trangchitietsanpham > article > .thongtinsp > .thongtin > .soluong > input {
+                        width: 5em;
+                    }
+
+                .trangchitietsanpham > article > .thongtinsp > .thongtin > .muahang {
+                    padding: 3em 0;
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .thongtin > .muahang > a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: rgb(41,41,41);
+                        font-size: 1.5em;
+                        border: solid 1px rgb(41,41,41);
+                        padding: 0.5em 2em;
+                        border-radius: 0.5em;
+                        transition: all .3s ease-in-out;
+                    }
+
+                        .trangchitietsanpham > article > .thongtinsp > .thongtin > .muahang > a:hover {
+                            background: rgb(41,41,41);
+                            color: rgb(255,255,255);
+                        }
+
+        /*Chi tiết sản phẩm*/
+        .trangchitietsanpham > article > .chitietsp {
+            margin: 3em 0 1em 0;
+            padding: 0 3em 3em 3em;
+            border-bottom: dotted 1px rgb(41,41,41);
+        }
+
+            .trangchitietsanpham > article > .chitietsp > p {
+                margin: 0;
+                letter-spacing: 0.7px;
+                line-height: 2em;
+            }
+
+                .trangchitietsanpham > article > .chitietsp > p > span {
+                    font-weight: bold;
+                }
+
+        .trangchitietsanpham > article > .quantam {
+        }
+
+            .trangchitietsanpham > article > .quantam > .tieude {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 1.5em;
+            }
+
+            /*Các sản phẩm*/
+            .trangchitietsanpham > article > .quantam > .cacsanpham {
+                margin: 2em 0;
+            }
+
+                /*Từng sản phẩm*/
+                .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham {
+                    padding: 0 0 3em 0;
+                    text-align: center;
+                }
+
+                    .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > img {
+                        margin: 0 auto;
+                        display: block;
+                        width: 70%;
+                    }
+
+                    .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > .sale {
+                        position: absolute;
+                        top: 0em;
+                        left: 0.5em;
+                    }
+
+                    .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > p {
+                        text-align: center;
+                        font-weight: bold;
+                        color: rgb(33,150,243);
+                        margin: 0 0 1.5em 0;
+                    }
+
+                        /*Giá*/
+                        .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > p > span {
+                            color: rgb(244,67,54);
+                            margin: 0 0.7em;
+                        }
+
+                    /*Nút xem thêm*/
+                    .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > div {
+                        width: 100%;
+                    }
+
+                        .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > div > a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: rgb(150,150,150);
+                            border: solid 1px rgb(150,150,150);
+                            padding: 0.5em 1.5em;
+                            transition: all .2s ease-in-out;
+                        }
+
+                            .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > div > a:hover {
+                                color: rgb(41,41,41);
+                                border: solid 1px rgb(41,41,41);
+                            }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .trangchitietsanpham {
+        margin: 5em 0 2em 0;
+    }
+
+        /*Phần ảnh sản phẩm*/
+        .trangchitietsanpham > article > .thongtinsp > .anh {
+            margin: 0 0 2em 0;
+            padding: 0;
+        }
+
+        .trangchitietsanpham > article > .thongtinsp > .thongtin {
+            font-size: 1.2em;
+        }
+
+        .trangchitietsanpham > article > .chitietsp {
+            margin: 0 0 1em 0;
+            padding: 0 2.5em 3em 2.5em;
+            font-size: 1.2em;
+        }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    .trangchitietsanpham {
+        margin: 5em 0 2em 0;
+    }
+
+        .trangchitietsanpham > article {
+            padding: 0;
+        }
+
+            .trangchitietsanpham > article > .thongtinsp > .anh {
+                margin: 0 0 2em 0;
+                padding: 0;
+            }
+
+                .trangchitietsanpham > article > .thongtinsp > .anh > .img {
+                    padding: 0;
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .anh > .img > img {
+                        padding: 0 2em;
+                    }
+
+                .trangchitietsanpham > article > .thongtinsp > .anh > .sub {
+                }
+
+                    .trangchitietsanpham > article > .thongtinsp > .anh > .sub > div {
+                        padding: 0;
+                        text-align: center;
+                    }
+
+                        .trangchitietsanpham > article > .thongtinsp > .anh > .sub > div > img {
+                            width: 90%;
+                        }
+
+            .trangchitietsanpham > article > .chitietsp {
+                padding: 0 2em 1em 2em;
+                font-size: 1.2em;
+            }
+
+            .trangchitietsanpham > article > .quantam > .cacsanpham > .sanpham > img {
+                width: 50%;
+            }
+}

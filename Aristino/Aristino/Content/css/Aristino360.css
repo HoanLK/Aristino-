@@ -1,0 +1,92 @@
+﻿.trangaristino360 {
+    padding: 0;
+    margin: 0;
+}
+
+    /*Tiêu đề trang*/
+    .trangaristino360 > .tieude {
+        text-align: center;
+        font-family: UVNAiCap;
+        font-size: 1.5em;
+        margin: 0 0 1.5em 0;
+    }
+
+        .trangaristino360 > .tieude > span {
+            font-family: UVNMuaThu;
+            font-size: 2em;
+        }
+
+    /*Các bài viết*/
+    .trangaristino360 > .cacbaiviet {
+    }
+
+        /*Từng bài viết*/
+        .trangaristino360 > .cacbaiviet > div {
+            text-align: center;
+            margin: 0 0 2em 0;
+        }
+
+            .trangaristino360 > .cacbaiviet > div > a {
+                display: block;
+                background: url(../images/gioithieu/bg.png) repeat;
+                text-decoration: none;
+                transition: all .3s ease-in-out;
+            }
+
+                .trangaristino360 > .cacbaiviet > div > a:hover {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+
+                .trangaristino360 > .cacbaiviet > div > a > img {
+                    width: 100%;
+                    height: 20em;
+                }
+
+                .trangaristino360 > .cacbaiviet > div > a > p {
+                    margin: 0;
+                    padding: 2em 1em;
+                    font-family: UVNAiCap;
+                    font-size: 1.1em;
+                }
+
+                    .trangaristino360 > .cacbaiviet > div > a > p > span {
+                        font-family: UVNMuaThu;
+                        font-size: 1.7em;
+                    }
+
+    /*số trang*/
+    .trangaristino360 > nav {
+        text-align: center;
+    }
+
+        .trangaristino360 > nav > ul > li.active > a {
+            background: rgb(41,41,41) !important;
+        }
+
+        .trangaristino360 > nav > ul > li > a {
+            text-align: center;
+            font-size: 1.1em;
+            color: rgb(41,41,41);
+            border: none;
+            margin: 0 0.3em;
+            border-radius: 2em;
+        }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .trangaristino360 {
+        margin: 5em 0 0 0;
+    }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    .trangaristino360 {
+        margin: 5em 0 0 0;
+    }
+
+        /*Các bài viết*/
+        .trangaristino360 > .cacbaiviet {
+            padding: 0;
+        }
+}

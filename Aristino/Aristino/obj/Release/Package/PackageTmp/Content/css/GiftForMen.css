@@ -1,0 +1,220 @@
+﻿/*Gift for men*/
+.tranggiftformen {
+    height: 1%;
+    overflow: hidden;
+    margin: 5em 0 3em 0;
+}
+
+    /*tiêu đề*/
+    .tranggiftformen > p {
+        text-align: center;
+        letter-spacing: 1px;
+        margin: 0 0 2em 0;
+        font-family: UVNAiCap;
+        font-size: 1.5em;
+    }
+
+        .tranggiftformen > p > span {
+            font-size: 2em;
+            font-family: UVNMuaThu;
+        }
+
+    /*Các trang tab*/
+    .tranggiftformen > div {
+        height: 1%;
+        overflow: hidden;
+    }
+
+        /*Các tabs*/
+        .tranggiftformen > div > .nav-tabs {
+            position: relative;
+            background: transparent;
+            border: none;
+            margin: 0 0 3em 0;
+        }
+
+            .tranggiftformen > div > .nav-tabs > li {
+                width: 30%;
+                text-align: center;
+                border: solid 1px rgb(41,41,41);
+                text-transform: uppercase;
+                font-size: 1.2em;
+            }
+
+                .tranggiftformen > div > .nav-tabs > li.active {
+                    background: rgb(150,150,150);
+                }
+
+                    .tranggiftformen > div > .nav-tabs > li.active > a {
+                        background: rgb(150,150,150);
+                        border: none;
+                    }
+
+                .tranggiftformen > div > .nav-tabs > li > a {
+                    color: rgb(41,41,41);
+                    border: none;
+                    border-radius: 0;
+                    margin: 0;
+                    padding: 1em 0;
+                    transition: all .3s ease-in-out;
+                }
+
+                    .tranggiftformen > div > .nav-tabs > li > a:hover {
+                        background: rgb(150,150,150);
+                        border: none;
+                    }
+
+        /*Nội dung các tab*/
+        .tranggiftformen > div > .tab-content > .tab-pane {
+            text-align: center;
+            padding: 0 0 2em 0;
+        }
+
+            /*Các sản phẩm trong mỗi tab*/
+            .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham {
+                height: 1%;
+                padding: 0;
+            }
+
+                /*Từng sản phẩm*/
+                .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham {
+                    text-align: center;
+                    padding: 0 0 5em 0;
+                }
+
+                    .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > p {
+                        font-weight: bold;
+                        color: rgb(33,150,243);
+                    }
+
+                        /*Giá tiền*/
+                        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > p > span {
+                            color: rgb(244,67,54);
+                        }
+
+                    /*Nút xem thêm*/
+                    .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: rgb(150,150,150);
+                        border: solid 1px rgb(150,150,150);
+                        padding: 0.5em 1em;
+                        transition: all .2s ease-in-out;
+                    }
+
+                        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > a:hover {
+                            color: rgb(41,41,41);
+                            border: solid 1px rgb(41,41,41);
+                        }
+
+            .tranggiftformen > div > .tab-content > .tab-pane > a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: rgb(41,41,41);
+                border: solid 1px rgb(41,41,41);
+                border-radius: 1em;
+                padding: 1em 2.5em;
+                transition: all .2s ease-in-out;
+            }
+
+                .tranggiftformen > div > .tab-content > .tab-pane > a:hover {
+                    background: rgb(41,41,41);
+                    color: rgb(255,255,255);
+                }
+
+    .tranggiftformen > nav {
+        text-align: center;
+    }
+
+        .tranggiftformen > nav > ul > li.active > a {
+            background: rgb(41,41,41) !important;
+        }
+
+
+        .tranggiftformen > nav > ul > li > a {
+            text-align: center;
+            font-size: 1.1em;
+            color: rgb(41,41,41);
+            border: none;
+            margin: 0 0.3em;
+            border-radius: 2em;
+        }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .tranggiftformen {
+        margin: 8em 0 3em 0;
+    }
+
+        /*tiêu đề*/
+        .tranggiftformen > p {
+            font-size: 1.2em;
+        }
+
+            .tranggiftformen > p > span {
+                font-size: 1.8em;
+            }
+
+        .tranggiftformen > div > .nav-tabs > li {
+            height: 5em;
+        }
+
+            .tranggiftformen > div > .nav-tabs > li > a {
+                padding: 1em 2em;
+            }
+
+        /*Các sản phẩm trong mỗi tab*/
+        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham {
+            padding: 2em 0 0 0;
+        }
+
+            /*Từng sản phẩm*/
+            .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham {
+                padding: 0 0 5em 0;
+            }
+
+                /*Nút xem thêm*/
+                .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > a {
+                    color: rgb(41,41,41);
+                    border: solid 1px rgb(41,41,41);
+                }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    /*Các tabs*/
+    .tranggiftformen > div > .nav-tabs {
+        margin: 0 0 5em 0;
+    }
+
+        .tranggiftformen > div > .nav-tabs > li {
+            width: 100%;
+            margin: 1em 0 !important;
+            font-size: 1em;
+        }
+
+    /*Từng sản phẩm*/
+    .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham {
+        padding: 0 0 8em 0;
+    }
+
+        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > img {
+            width: 80%;
+        }
+
+        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > p {
+            font-size: 1.3em;
+            margin: 2em 0;
+        }
+
+        /*Nút xem thêm*/
+        .tranggiftformen > div > .tab-content > .tab-pane > .cacsanpham > .sanpham > a {
+            font-size: 1.3em;
+            color: rgb(41,41,41);
+            border: solid 1px rgb(41,41,41);
+        }
+
+    .tranggiftformen > div > .tab-content > .tab-pane > a {
+        font-size: 1.5em;
+    }
+}

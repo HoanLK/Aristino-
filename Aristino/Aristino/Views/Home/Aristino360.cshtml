@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Aristino360";
+}
+
+<section class="trangaristino360 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <p class="tieude">
+        <span>Aristino 360</span><br />
+        Tổng hợp tất cả tin tức thời trang toàn cầu và tin nóng hổi từ Aristino
+    </p>
+
+    <!--Danh sách bài viết-->
+    <article class="cacbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        @for (int i = 0; i < 9; i++)
+        {
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <a href="@Url.Action("BaiViet", "Home")">
+                    <img src="~/Content/images/khuyenmai/km-1.png" alt="" />
+                    <p>
+                        <span>Khai trương showroom Aristino 76 Nguyễn Đức Cảnh</span><br />
+                        *****<br />
+                        Ngày 08/03/2017, ARISTINO tưng bừng khai trương showroom 76 Nguyễn Đức Cảnh, Tp. Hải Phòng. ARISTINO gửi tới quý khách hàng hàng loạt ƯU ĐÃI hấp dẫn.
+                    </p>
+                </a>
+            </div>
+        }
+    </article>
+
+    <!--Số trang-->
+    <nav aria-label="Page navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>

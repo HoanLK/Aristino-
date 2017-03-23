@@ -1,0 +1,374 @@
+header {
+    padding: 0 !important;
+    z-index: 999;
+}
+
+    /*Menu cho máy tính*/
+    header > .desktop {
+        padding: 0;
+    }
+
+        /*Thanh menu trên cùng*/
+        header > .desktop > .top {
+            background: rgb(41,41,41);
+            padding: 0.5em 4em;
+        }
+
+            /*Số điện thoại*/
+            header > .desktop > .top > p {
+                color: rgb(255,255,255);
+                margin: 0;
+            }
+
+                header > .desktop > .top > p > span {
+                    font-weight: bold;
+                }
+
+            /*Menu chính*/
+            header > .desktop > .top > .menu {
+                list-style: none;
+                margin: 0;
+            }
+
+                header > .desktop > .top > .menu > li {
+                    float: left;
+                    margin: 0 0 0 1em;
+                }
+
+                    header > .desktop > .top > .menu > li > a {
+                        color: rgb(255,255,255);
+                        padding: 0 0.2em;
+                    }
+
+                        header > .desktop > .top > .menu > li > a:hover {
+                        }
+
+        /*Phần logo, tìm kiếm, hotline, giỏ hàng*/
+        header > .desktop > .mid {
+            padding: 0.6em 3em;
+            background: rgb(255,255,255) !important;
+        }
+
+            /*Logo*/
+            header > .desktop > .mid > .logo {
+                margin: 0 5em 0 0;
+            }
+
+                header > .desktop > .mid > .logo > img {
+                }
+
+            /*Tìm kiếm*/
+            header > .desktop > .mid > .timkiem {
+                margin: 0 5em 0 0;
+            }
+
+                header > .desktop > .mid > .timkiem > input {
+                    height: 3em;
+                    width: 30em;
+                    padding: 0 3em 0 1em;
+                }
+
+                header > .desktop > .mid > .timkiem > button {
+                    width: 3em;
+                    height: 100%;
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0em;
+                }
+
+                    header > .desktop > .mid > .timkiem > button:hover {
+                    }
+
+                    header > .desktop > .mid > .timkiem > button > i {
+                        font-size: 1.5em;
+                    }
+
+            /*Hotline*/
+            header > .desktop > .mid > .hotline {
+                margin: 0 5em 0 0;
+            }
+
+                header > .desktop > .mid > .hotline > i {
+                    float: left;
+                    font-size: 2.5em;
+                    width: 1.3em;
+                    height: 1.3em;
+                    padding: 0.2em 0;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    color: rgb(255,255,255);
+                    background: rgb(41,41,41);
+                    border-radius: 0.2em;
+                }
+
+                header > .desktop > .mid > .hotline > p {
+                    float: left;
+                    margin: 0;
+                    padding: 0 0 0 1em;
+                    height: 2.75em;
+                    font-size: 1.2em;
+                }
+
+                    header > .desktop > .mid > .hotline > p > span {
+                        font-weight: bold;
+                    }
+
+            /*Giỏ hàng*/
+            header > .desktop > .mid > .buy {
+                cursor: pointer;
+                color: rgb(41,41,41);
+                height: 100%;
+            }
+
+                header > .desktop > .mid > .buy > i {
+                    float: left;
+                    font-size: 3em;
+                }
+
+                header > .desktop > .mid > .buy > p {
+                    float: left;
+                    margin: 0;
+                    font-size: 1.5em;
+                    margin: 0.3em 0 0 0.8em;
+                }
+
+        /*Menu sản phẩm*/
+        header > .desktop > .bot {
+            background: rgb(41,41,41);
+        }
+
+            header > .desktop > .bot > ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                height: 1%;
+                overflow: hidden;
+                width: 50%;
+                margin: 0 25%;
+            }
+
+                header > .desktop > .bot > ul > li {
+                    float: left;
+                    margin: 0;
+                    width: 25%;
+                }
+
+                    header > .desktop > .bot > ul > li > a {
+                        text-decoration: none;
+                        text-align: center;
+                        color: rgb(255,255,255);
+                        margin: 0;
+                        padding: 0.5em 0;
+                        width: 100%;
+                        font-size: 1.2em;
+                        display: block;
+                        transition: all .3s ease-in-out;
+                    }
+
+                        header > .desktop > .bot > ul > li > a:hover {
+                            background: rgb(255,255,255);
+                            color: rgb(41,41,41);
+                        }
+
+/*Footer*/
+footer {
+    background: rgb(41,41,41);
+    padding: 1em 1em 0.5em;
+}
+
+    /*Thông tin cửa hàng*/
+    footer > .thongtin {
+        color: rgb(255,255,255) !important;
+        letter-spacing: 1px;
+    }
+
+        footer > .thongtin > .tieude {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: rgb(255,255,255) !important;
+            font-size: 1.5em;
+            border-bottom: dotted 1px rgb(255,255,255);
+            padding: 0 0 0.5em 0;
+            margin: 0;
+        }
+
+        footer > .thongtin > .mota {
+            margin: 0;
+            text-align: justify;
+            color: rgb(255,255,255) !important;
+        }
+
+        footer > .thongtin > hr {
+            width: 40%;
+            float: left;
+            margin: 0.7em 0;
+        }
+
+        footer > .thongtin > .diachi {
+            width: 100%;
+            height: 1%;
+            overflow: hidden;
+        }
+
+            footer > .thongtin > .diachi > p {
+                color: rgb(255,255,255) !important;
+                margin: 0;
+            }
+
+                footer > .thongtin > .diachi > p > span {
+                    font-weight: bold;
+                }
+
+    /*Các sản phẩm nổi bật*/
+    footer > .sanphamnoibat {
+        letter-spacing: 1px;
+    }
+
+        footer > .sanphamnoibat > .tieude {
+            color: rgb(255,255,255);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.5em;
+            border-bottom: dotted 1px rgb(255,255,255);
+            padding: 0 0 0.5em 0;
+            margin: 0;
+        }
+
+        footer > .sanphamnoibat > div {
+        }
+
+            footer > .sanphamnoibat > div > a {
+                color: rgb(255,255,255);
+            }
+
+                footer > .sanphamnoibat > div > a:hover {
+                }
+
+            footer > .sanphamnoibat > div > span {
+                color: rgb(255,255,255);
+            }
+
+    /*Form đăng ký và các nút mạng xã hội*/
+    footer > .dangky-follow {
+        padding: 0;
+    }
+
+        /*Đăng ký*/
+        footer > .dangky-follow > .dangky {
+            padding: 0.8em 1em 0;
+        }
+
+            footer > .dangky-follow > .dangky > p {
+                color: rgb(255,255,255);
+                margin: 0 0 0.7em 0;
+            }
+
+            footer > .dangky-follow > .dangky > form {
+            }
+
+                footer > .dangky-follow > .dangky > form > input {
+                    height: 2.5em;
+                    width: 70%;
+                    border: solid 1px rgb(255,255,255);
+                    margin: 0;
+                }
+
+                footer > .dangky-follow > .dangky > form > button {
+                    width: 20%;
+                    height: 2.5em;
+                    background: transparent;
+                    color: rgb(255,255,255);
+                    border: solid 1px rgb(255,255,255);
+                    margin: 0;
+                    transition: all .2s ease-in-out;
+                }
+
+                    footer > .dangky-follow > .dangky > form > button:hover {
+                        background: rgb(255,255,255);
+                        color: rgb(41,41,41);
+                    }
+
+        /*Các nút mạng xã hội*/
+        footer > .dangky-follow > .follow {
+            margin: 2em 0 0 0;
+        }
+
+            footer > .dangky-follow > .follow > p {
+                color: rgb(255,255,255);
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.1em;
+                letter-spacing: 1px;
+                border-bottom: dotted 1px rgb(255,255,255);
+                padding: 0 0 0.5em;
+                margin: 0;
+            }
+
+            footer > .dangky-follow > .follow > div {
+                display: table;
+                margin: 0.5em 0 0 0;
+            }
+
+                footer > .dangky-follow > .follow > div > a {
+                    color: rgb(255,255,255);
+                    font-size: 1.5em;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin: 0 2em 0 0 !important;
+                    width: 2em;
+                    height: 2em;
+                    border: solid 1px rgb(255,255,255);
+                    border-radius: 2em;
+                    transition: all .2s ease-in-out;
+                }
+
+                    footer > .dangky-follow > .follow > div > a:hover {
+                        background: rgb(255,255,255);
+                        color: rgb(41,41,41);
+                    }
+
+                    footer > .dangky-follow > .follow > div > a > i {
+                    }
+
+    /*Bản quyền thiết kế*/
+    footer > .ktn {
+        color: rgb(255,255,255);
+        text-align: center;
+    }
+
+        footer > .ktn > a {
+            color: rgb(255,255,255);
+        }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*Bản quyền thiết kế*/
+    footer > .ktn {
+        margin: 1.5em 0 0;
+    }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    /*Các sản phẩm nổi bật*/
+    footer > .sanphamnoibat {
+        margin: 1.5em 0 0;
+    }
+
+    /*Form đăng ký và các nút mạng xã hội*/
+
+    footer > .dangky-follow {
+        margin: 1.5em 0 0;
+    }
+
+    /*Bản quyền thiết kế*/
+    footer > .ktn {
+        margin: 1.5em 0 0;
+    }
+}
