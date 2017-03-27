@@ -1,0 +1,37 @@
+﻿@model CMS.Models.Post
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="trangbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="postController">
+    <input type="hidden" value="@Model.idPost" id="idPost" />
+    <!--Nội dung bài viét-->
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="tieude">{{post.title}}</p>
+        <p class="ngaydang">Ngày đăng: {{post.timeCreated | date:'dd-MM-yyyy'}}</p>
+        <div class="noidung col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img ng-src="{{post.image}}" alt="{{post.title}}" />
+            <div ng-bind-html="post.content"></div>
+        </div>
+        <div class="like col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>* Like Fanpage để liên tục cập nhật ƯU ĐÃI từ ARISTINO.</p>
+
+        </div>
+        <hr />
+    </article>
+
+    <!--Các bài viết khác-->
+    <div class="baivietkhac col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p>Bài viết khác</p>
+
+        <!--Các bài viết-->
+        <div class="cacbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="baiviet col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="(index, value) in relatedPosts">
+                <a href="/bai-viet/{{value.alias}}-{{vale.idPost}}">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p>{{value.title}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

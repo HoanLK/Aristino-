@@ -1,0 +1,144 @@
+﻿@model CMS.Models.Product
+@{
+    ViewBag.Title = @Model.title;
+}
+
+<section class="trangchitietsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="productController">
+    <input type="hidden" value="@Model.idProduct" id="idProduct" />
+    <!--Chi tiết sản phẩm-->
+    <article class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right">
+
+        <!--Thông tin sản phẩm-->
+        <div class="thongtinsp col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Ảnh sản phẩm-->
+            <div class="anh col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="img col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img ng-src="{{product.image}}" alt="{{product.title}}" />
+                </div>
+                @*<div class="sub col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <img src="~/Content/images/sanphamnoibat.png" alt="" />
+                        </div>
+                    }
+                </div>*@
+            </div>
+
+            <!--Thông tin sản phẩm-->
+            <div class="thongtin col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <p class="tieude">{{product.title}}</p>
+                <p class="masanpham">Mã sản phẩm: {{value.maSP}}</p>
+                <p class="tinhtrang">Trạng thái: {{valuue.soLuong}}</p>
+                <p class="gia">Đơn giá: {{product.price | number:0}} đ</p>
+                <p class="mota">{{product.description}}</p>
+
+                <!--Chọn size-->
+                <div class="size">
+                    <p>Chọn size:</p>
+                    <ul>
+                        <li><a href="#">S</a></li>
+                        <li><a href="#">M</a></li>
+                        <li><a href="#">L</a></li>
+                        <li><a href="#">XL</a></li>
+                    </ul>
+                </div>
+
+                <!--Chọn số lượng-->
+                <div class="soluong">
+                    <p>Số lượng:</p>
+                    <input type="number" value="" />
+                </div>
+
+                <!--Mua hàng-->
+                <div class="muahang">
+                    <a href="#">Mua hàng</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Mô tả chi tiết-->
+        <div class="chitietsp col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-bind-html="product.content"></div>
+
+        <!--Có thể bạn quan tâm-->
+        <div class="quantam col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="tieude">Có thể bạn quan tâm</p>
+
+            <!--Các sản phẩm-->
+            <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--Sản phẩm-->
+                <p ng-hide="products.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" dir-paginate="(index, value) in products | itemsPerPage:4" ng-show="products.length > 0">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p>
+                        {{value.title}} <br />
+                        <span>{{value.price}} đ</span>
+                    </p>
+
+                    <!--Nút xem chi tiết-->
+                    <div>
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Danh mục sản phẩm-->
+    @Html.Partial("_DanhMucSanPham")
+</section>
+
+
+
+
+
+
+
+@*<section class="chitiettour row" ng-controller="productController">
+    <input type="hidden" value="@Model.idProduct" id="idProduct" />
+    <!--Tour-->
+    <div class="tour col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <!--Tóm tắt tour-->
+        <div class="tomtat">
+            <img ng-src="{{product.image}}" alt="{{product.title}}" class="img-responsive col-xs-12" />
+
+            <!--Thông tin-->
+            <div class="thongtin col-xs-12">
+                <p class="tentour"><span>Tên tour: </span>{{product.title}}</p>
+                <p><span>Thời gian: </span>{{product.dateNumber}} ngày {{product.nightNumber}} đêm</p>
+                <p><span>Ngày đi: </span>{{product.timeStart | date:'dd-MM-yyyy'}}</p>
+                <p class="gia"><span>Giá: </span>{{product.price | number:0}} vnđ</p>
+            </div>
+        </div>
+
+        <!--Lịch trình tour-->
+        <div class="lichtrinh col-xs-12 col-sm-12">
+
+            <!--Tiêu đề-->
+            <div class="tieude">
+                <p>Lịch trình</p>
+                <div class="ve"></div>
+            </div>
+
+            <div class="text" ng-bind-html="product.content"></div>
+        </div>
+    </div>
+
+    <!--Các tour khác-->
+    <div class="tourkhac col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <p class="tieude">Các tour khác</p>
+
+        <!--Danh sách tour-->
+        <div class="danhsach">
+            <!--Tour-->
+            <a href="/tour/{{value.alias}}-{{value.idProduct}}" class="tour col-xs-12 col-sm-6"  dir-paginate="(index, value) in products | itemsPerPage:4">
+                <img ng-src="{{value.image}}" alt="{{value.title}}" class="img-responsive" />
+                <p>{{value.title}}</p>
+            </a>
+        </div>
+    </div>
+</section>*@

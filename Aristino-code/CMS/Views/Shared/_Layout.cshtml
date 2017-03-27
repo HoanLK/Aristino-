@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--SEO-->
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@((ViewBag.Description!=null)?ViewBag.Description:"")" />
+    <meta name="keywords" content='@((ViewBag.Keywords!=null)?ViewBag.Keywords:"")' />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="robots" content='@((ViewBag.Robots!=null)?ViewBag.Robots:"index, noop, follow")' />
+    <meta http-equiv="content-language" content="vi" />
+    <link href="~/Content/Front/images/logo-co.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="alternate" href="" hreflang="vi" />
+
+    <meta itemprop="name" content='@((ViewBag.Title!=null)?ViewBag.Title : "")'>
+    <meta itemprop="description" content='@((ViewBag.Description!=null)?ViewBag.Description:"")'>
+    <meta itemprop="image" content='@((ViewBag.Image!=null)?ViewBag.Image:"")'>
+
+    <meta property="og:title" content='@((ViewBag.Title!=null)?ViewBag.Title : "")' />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content='@((ViewBag.Image!=null)?ViewBag.Image:"")' />
+    <meta property="og:description" content='@((ViewBag.Description!=null)?ViewBag.Description:"")' />
+    <meta property="og:site_name" content="" />
+
+    <meta name="geo.placename" content="" />
+    <meta name="geo.region" content="VN-HP" />
+    <meta name="geo.position" content="" />
+    <meta name="ICBM" content="" />
+
+    <link rel="image_src" href='@((ViewBag.Image!=null)?ViewBag.Image:"")' />
+
+    <!--Site-->
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/font-awesome.min.css" rel="stylesheet" />*@
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <link href="~/Content/Front/css/_Layout.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/_DanhMucSanPham.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/_Banner.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/Menu-mobile.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/trangchu.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/GioiThieu.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/KhuyenMai.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/BoSuuTap.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/BoSuuTap-details.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/BoSuuTap-topics.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/GiftForMen.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/Aristino360.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/BaiViet.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/SanPham.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/loaisanpham.min.css" rel="stylesheet" />
+    <link href="~/Content/Front/css/chitietsanpham.min.css" rel="stylesheet" />
+
+    <script src="~/Content/Front/js/modernizr.custom.min.js"></script>
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-app="frontApp" style="padding:0;">
+
+    <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Desktop-->
+        <div class="desktop hidden-xs hidden-sm col-md-12 col-lg-12">
+
+            <!--Menu-top-->
+            <div class="top col-md-12 col-lg-12">
+                <p class="pull-left"><span>Tư vấn 24/7: </span>(+84) 91 301 79 88</p>
+
+                <!--Menu-->
+                <ul class="menu pull-right">
+                    <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li><a href="/danh-muc-bai-viet/khuyen-mai-4">Khuyến mại</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!--Logo - Search - Hotline - Buy-->
+            <div class="mid col-md-12 col-lg-12">
+
+                <!--Logo-->
+                <a href="@Url.Action("Index","Home")" class="logo pull-left">
+                    <img src="~/Content/Front/images/logo.png" alt="" class="img-responsive" />
+                </a>
+
+                <!--Tìm kiếm-->
+                <div class="timkiem pull-left">
+                    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm..." />
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+
+                <!--Hotline-->
+                <div class="hotline pull-left">
+                    <i class="fa fa-phone"></i>
+                    <p>
+                        Hỗ trợ <br />
+                        <span>091 301 79 88</span>
+                    </p>
+                </div>
+
+                <!--Giỏ hàng-->
+                <a class="buy pull-left">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>0 Sản phẩm</p>
+                </a>
+            </div>
+
+            <!--Bộ sưu tập - Gift - 360 - order-->
+            <div class="bot col-md-12 col-lg-12">
+                <ul>
+                    <li><a href="/danh-muc-bai-viet/bo-suu-tap-2">Bộ sưu tập</a></li>
+                    <li><a href="/danh-muc-san-pham/gift-for-men">Gift for men</a></li>
+                    <li><a href="/danh-muc-bai-viet/aristino-360">Aristino 360</a></li>
+                    <li><a href="/danh-muc-san-pham/tat-ca-san-pham">Sản phẩm</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Mobile-->
+        <div class="mobile col-xs-12 col-sm-12 hidden-md hidden-lg">
+
+            <!--Thanh menu-->
+            <ul class="nav">
+                <li class="nav_icon nav_main" data-icon="menu"></li>
+                <li class="nav_title"><a href="tel:0913 017 998">0913 017 998</a></li>
+                @*<li class="giohang"><a href="#"><i class="fa fa-shopping-cart"></i><p>0</p></a></li>*@
+                <li class="nav_icon" data-nav="Search" data-icon="search"></li>
+            </ul>
+
+            <!--Menu sổ ra-->
+            <ul class="drawer">
+                <li><img src="~/Content/Front/images/logo.png" class="img-responsive" /></li>
+                <li class="drawer_item drawer_itemActive"><a href="@Url.Action("Index","Home")" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li class="drawer_item"><a href="@Url.Action("KhuyenMai","Home")"><i class="fa fa-diamond"></i>Khuyến mại</a></li>
+                <li class="drawer_item"><a href="@Url.Action("SanPham","Home")"><i class="fa fa-shopping-cart"></i>Sản phẩm</a></li>
+                <li class="drawer_item"><a href="@Url.Action("BoSuuTap","Home")"><i class="fa fa-picture-o"></i>Bộ sưu tập</a></li>
+                <li class="drawer_item"><a href="@Url.Action("GiftForMen","Home")"><i class="fa fa-gift"></i>Gift for men</a></li>
+                <li class="drawer_item"><a href="@Url.Action("Aristino360","Home")"><i class="fa fa-newspaper-o"></i>Aristino 360</a></li>
+                <li class="drawer_item"><a href="@Url.Action("About","Home")"><i class="fa fa-vcard-o"></i>Giới thiệu</a></li>
+                <li class="drawer_item"><a href="@Url.Action("Contact","Home")"><i class="fa fa-phone"></i>Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Thông tin-->
+        <div class="thongtin col-xs-12 col-sm-7 col-md-5 col-lg-5">
+            <p class="tieude">SHOWROOM ARISTINO</p>
+            <p class="mota">
+                Chúng tôi cung cấp những sản phẩm thời trang nam nhãn hiệu Aristino chính hãng.
+                Lịch lãm và sang trọng, quý phái trong từng đường nét.
+            </p>
+            <hr />
+            <div class="diachi">
+                <p><span>Showroom Đà Nẵng: </span>số 1 Đà Nẵng, Ngô Quyền, Hải Phòng</p>
+                <p><span>Showroom Lạch Tray: </span>số 306 Lạch Tray, Ngô Quyền, Hải Phòng</p>
+                <p><span>Showroom Nguyễn Đức Cảnh: </span>số 76 Nguyễn Đức Cảnh, Hải Phòng</p>
+                <p><span>Hotline: </span>0913 017 998</p>
+            </div>
+        </div>
+
+        <!--Sản phẩm nổi bật-->
+        <div class="sanphamnoibat col-xs-12 col-sm-5 col-md-3 col-lg-3">
+            <p class="tieude">Sản phẩm nổi bật</p>
+            <div>
+                @for (int i = 0; i < 10; i++)
+                {
+                    <a href="@Url.Action("LooaiSanPham","Home")">thời trang nam</a><span>,</span>
+                }
+            </div>
+        </div>
+
+        <!--Đăng ký - follow-->
+        <div class="dangky-follow col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+            <!--Đăng ký-->
+            <div class="dangky col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                <p>Đăng ký nhận thông tin khuyến mãi và ưu đãi của Aristino</p>
+                <form>
+                    <input type="text" placeholder="Nhập email của bạn ...." value="" />
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+
+            <!--Follow-->
+            <div class="follow col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                <p>Follow us on</p>
+                <div>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!--Design by-->
+        <p class="ktn col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            Design by <a href="http://www.ketnoitrejsc.com/" target="_blank">Kết Nối Trẻ JSC</a>
+        </p>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+    <!--jquery-->
+    @*<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    @*<script src="~/Scripts/modernizr-2.8.3.js"></script>*@
+
+    <!--AngularJS-->
+    @*<script src="~/Scripts/angular.min.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    @*<script src="~/Scripts/angular-sanitize.min.js"></script>*@
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.js"></script>
+    <script src="~/Scripts/angular-cookies.min.js"></script>
+
+    <!--Message-->
+    <script src="~/Content/admin/js/libs/toastr/toastr.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            toastr.options = {
+                "positionClass": "toast-bottom-left"
+            };
+        });
+    </script>
+
+    <!--AngularJS custom-->
+    <script src="~/Scripts/Front/frontApp.js"></script>
+    <script src="~/Scripts/Front/pagination/dirPagination.min.js"></script>
+
+    <!--Tự viết-->
+    <script src="~/Content/Front/js/myScripts.min.js"></script>
+    <script src="~/Content/Front/js/Menu-Mobile.min.js"></script>
+
+    <!--Loading-->
+    <script src="~/Scripts/loading-spinner/spin.min.js"></script>
+    <script src="~/Scripts/loading-spinner/angular-spinner.min.js"></script>
+    <script src="~/Scripts/loading-spinner/angular-loading-spinner.js"></script>
+
+    <!--Home-->
+    <script src="~/Scripts/front/homeController.min.js"></script>
+
+    <!--Tin khuyến mại-->
+    <script src="~/Scripts/front/kmController.min.js"></script>
+
+    <!--Banner-->
+    <script src="~/Scripts/Front/bannerController.min.js"></script>
+
+    <!--Video-->
+    @*<script src="~/Scripts/Front/videoController.min.js"></script>*@
+
+    <!--Category Post-->
+    <script src="~/Scripts/Front/categoryPostFactory.min.js"></script>
+    <script src="~/Scripts/Front/categoryPostController.min.js"></script>
+
+    <!--Category Product-->
+    <script src="~/Scripts/Front/categoryProductFactory.min.js"></script>
+    <script src="~/Scripts/Front/categoryProductController.min.js"></script>
+
+    <!--Post-->
+    <script src="~/Scripts/Front/postController.min.js"></script>
+
+    <!--Product-->
+    <script src="~/Scripts/Front/productController.min.js"></script>
+
+    <!--Search-->
+    <script src="~/Scripts/Front/searchController.min.js"></script>
+
+    <!--Contact-->
+    <script src="~/Scripts/Front/contactController.min.js"></script>
+
+    <!--Order-->
+    <script src="~/Scripts/Front/themOrderController.min.js"></script>
+
+    <!--Image-->
+    @*<script src="~/Scripts/front/imageController.min.js"></script>*@
+
+    <!--Search-->
+    <script src="~/Scripts/Front/searchController.min.js"></script>
+    <script src="~/Scripts/Front/showSearchController.min.js"></script>
+
+    <script>
+        $(function () {
+
+            $(window).bind('scroll', function () {
+                var navHeight = $('.mobile').height();
+                if ($(window).scrollTop() > navHeight) {
+                    $('#dl-menu').addClass('fixed');
+                }
+                else {
+                    $('#dl-menu').removeClass('fixed');
+                }
+            });
+
+            $('#dl-menu').dlmenu({
+                animationClasses: { classin: 'dl-animate-in-5', classout: 'dl-animate-out-5' }
+            });
+        });
+    </script>
+</body>
+</html>

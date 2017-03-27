@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="trangsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="categoryProductController">
+    <input type="hidden" value="@Model.idCategory" id="idCategoryProduct" />
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <!--Danh sách sản phẩm-->
+    <article class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right">
+
+        <!--Sản phẩm mới-->
+        <div class="danhsachsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Tiêu đề-->
+            <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>Sản phẩm mới nhất</p>
+                <a href="#">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+            </div>
+
+            <!--Các sản phẩm-->
+            <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--Sản phẩm-->
+                <p ng-hide="spMois.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spMois">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p>
+                        {{value.title}} <br />
+                        <span>{{value.price | number:0}} đ</span>
+                    </p>
+
+                    <!--Nút mua hàng-->
+                    <div>
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm nổi bật-->
+        <div class="danhsachsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Tiêu đề-->
+            <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>Sản phẩm nổi bật</p>
+                <a href="#">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+            </div>
+
+            <!--Các sản phẩm-->
+            <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--Sản phẩm-->
+                <p ng-hide="spNoiBats.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spNoiBats">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p>
+                        {{value.title}} <br />
+                        <span>{{value.price | number:0}} đ</span>
+                    </p>
+
+                    <!--Nút mua hàng-->
+                    <div>
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sale off product-->
+        <div class="danhsachsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Tiêu đề-->
+            <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>Sale off product</p>
+                <a href="#">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+            </div>
+
+            <!--Các sản phẩm-->
+            <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--Sản phẩm-->
+                <p ng-hide="spSales.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spSales">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p>
+                        {{value.title}} <br />
+                        <span>{{value.price | number:0}} đ</span>
+                    </p>
+
+                    <!--Nút mua hàng-->
+                    <div>
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Danh mục sản phẩm-->
+    @Html.Partial("_DanhMucSanPham")
+</section>

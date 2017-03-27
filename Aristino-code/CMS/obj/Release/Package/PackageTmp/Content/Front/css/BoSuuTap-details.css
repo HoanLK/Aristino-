@@ -1,0 +1,172 @@
+﻿/*Trang giới thiệu*/
+.trangbosuutapdetails {
+    padding: 0;
+}
+
+    .trangbosuutapdetails > .tieude {
+        text-align: center;
+        font-family: UVNAiCap;
+        font-size: 1.6em;
+    }
+
+        .trangbosuutapdetails > .tieude > span {
+            font-family: UVNMuaThu;
+            font-size: 2em;
+        }
+
+    /*các tiêu chí*/
+    .trangbosuutapdetails > .cacbosuutap {
+        margin: 1em 0;
+        padding: 0 2em;
+    }
+
+        /*Từng tiêu chí*/
+        .trangbosuutapdetails > .cacbosuutap > .bosuutap {
+            padding: 0;
+            background: url(../images/gioithieu/bg.png);
+            background-repeat: repeat;
+            height: 77vh;
+            margin: 1em 0;
+        }
+
+            .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin {
+                width: 45%;
+                height: 100%;
+                text-align: center;
+                padding: 0;
+            }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > p {
+                    padding: 4em 2em 0 2em;
+                    margin: 0;
+                    text-align: center;
+                    font-family: UVNAiCap;
+                    font-size: 1.6em;
+                    width: 100%;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > p > span {
+                        font-family: UVNMuaThu;
+                        font-size: 1.9em;
+                    }
+
+            .trangbosuutapdetails > .cacbosuutap > .bosuutap > img {
+                width: 55%;
+                height: 100%;
+            }
+
+            .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem {
+                padding: 2em 0;
+            }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem > a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: UVNAiCap;
+                    color: rgb(41,41,41);
+                    font-size: 1.5em;
+                    border: solid 1px rgb(41,41,41);
+                    border-radius: 0.5em;
+                    padding: 0.3em 1em 0.4em 1em;
+                    transition: all .2s ease-in-out;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem > a:hover {
+                        background: rgb(41,41,41);
+                        color: rgb(255,255,255);
+                    }
+
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*Trang giới thiệu*/
+    .trangbosuutapdetails {
+        margin: 4em 0;
+    }
+
+        /*các tiêu chí*/
+        .trangbosuutapdetails > .cacbosuutap {
+            padding: 0;
+        }
+
+            /*Từng tiêu chí*/
+            .trangbosuutapdetails > .cacbosuutap > .bosuutap {
+                height: auto;
+                margin: 1em 0;
+            }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin {
+                    width: 100%;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > p {
+                        padding: 2em 2em 0 2em;
+                    }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > img {
+                    width: 100%;
+                }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem {
+                    padding: 2em 0 3em 0;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem > a {
+                        padding: 0.3em 1em 0.4em 1em;
+                    }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    /*Trang giới thiệu*/
+    .trangbosuutapdetails {
+        padding: 0;
+        margin: 4em 0;
+    }
+
+        .trangbosuutapdetails > .tieude {
+            font-size: 1.2em;
+        }
+
+            .trangbosuutapdetails > .tieude > span {
+                font-size: 2em;
+                line-height: 1.2em;
+            }
+
+        /*các tiêu chí*/
+        .trangbosuutapdetails > .cacbosuutap {
+            padding: 0;
+        }
+
+            /*Từng tiêu chí*/
+            .trangbosuutapdetails > .cacbosuutap > .bosuutap {
+                height: auto;
+                margin: 1em 0;
+            }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin {
+                    width: 100%;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > p {
+                        padding: 2em 2em 0 2em;
+                        margin: 0;
+                        font-size: 1.2em;
+                    }
+
+                        .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > p > span {
+                            font-size: 2em;
+                        }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > img {
+                    width: 100%;
+                }
+
+                .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem {
+                    padding: 1.5em 0 2em 0;
+                }
+
+                    .trangbosuutapdetails > .cacbosuutap > .bosuutap > .thongtin > .xemthem > a {
+                        font-size: 1.2em;
+                    }
+}

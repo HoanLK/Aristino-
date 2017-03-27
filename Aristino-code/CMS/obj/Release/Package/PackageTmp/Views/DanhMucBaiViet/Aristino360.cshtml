@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Aristino 360";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="trangaristino360 col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="categoryPostController">
+    <input type="hidden" value="3" id="idCategory" />
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <p class="tieude">
+        <span>Aristino 360</span><br />
+        Tổng hợp tất cả tin tức thời trang toàn cầu và tin nóng hổi từ Aristino
+    </p>
+
+    <!--Danh sách bài viết-->
+    <article class="cacbaiviet col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p ng-hide="posts.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" dir-paginate="(index, value) in posts | itemsPerPage: 12" ng-show="posts.length > 0">
+            <a href="/bai-viet/{{value.alias}}-{{value.idPost}}">
+                <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                <p>
+                    <span>{{value.title}}</span><br />
+                    *****<br />
+                   {{value.description}}
+                </p>
+            </a>
+        </div>
+    </article>
+
+    <!--Số trang-->
+    <nav aria-label="Page navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <dir-pagination-controls></dir-pagination-controls>
+    </nav>
+</section>

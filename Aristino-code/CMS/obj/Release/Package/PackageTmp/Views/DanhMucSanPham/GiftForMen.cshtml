@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Gift For Men";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="tranggiftformen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <!--Tiêu đề-->
+    <p class="tieude">
+        <span>Gift For Men</span><br />
+        Những món quà đầy ý nghĩa và sang trọng dành cho người đàn ông lịch lãm
+    </p>
+
+    <!--Các tabs-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab">ARISTINO PROFRESSIONAL</a></li>
+            <li role="presentation" style="margin-left: 5%; margin-right: 5%;"><a href="#care" aria-controls="care" role="tab" data-toggle="tab">ARISTINO CARE</a></li>
+            <li role="presentation"><a href="#card" aria-controls="card" role="tab" data-toggle="tab">ARISTINO GIFT CARD</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="pro">
+
+                <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <p ng-hide="giftForMens1.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                    <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" dir-paginate="(index, value) in giftForMens1 | itemsPerPage: 8" ng-show="giftForMens1.length > 0">
+                        <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                        <p>
+                            {{value.title}} <br />
+                            <span>{{value.price | number:0}} đ</span>
+                        </p>
+
+                        <!--Nút mua hàng-->
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="care">
+                <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <p ng-hide="giftForMens2.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                    <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" dir-paginate="(index, value) in giftForMens2 | itemsPerPage: 8" ng-show="giftForMens2.length > 0">
+                        <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                        <p>
+                            {{value.title}} <br />
+                            <span>{{value.price | number:0}} đ</span>
+                        </p>
+
+                        <!--Nút mua hàng-->
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="card">
+                <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <p ng-hide="giftForMens3.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                    <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" dir-paginate="(index, value) in giftForMens3 | itemsPerPage: 8" ng-show="giftForMens3.length > 0">
+                        <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                        <p>
+                            {{value.title}} <br />
+                            <span>{{value.price | number:0}} đ</span>
+                        </p>
+
+                        <!--Nút mua hàng-->
+                        <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Số trang-->
+    <nav aria-label="Page navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <dir-pagination-controls></dir-pagination-controls>
+    </nav>
+</section>

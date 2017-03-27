@@ -1,0 +1,142 @@
+﻿.trangsanpham {
+    margin: 0;
+    padding: 0;
+}
+
+    .trangsanpham > article {
+        padding: 0;
+    }
+
+        /*Sản phẩm nổi bật & Sản phẩm mới*/
+        .trangsanpham > article > .danhsachsanpham {
+            padding: 0;
+            margin: 0 0 5em 0;
+        }
+
+            /*Tiêu đề*/
+            .trangsanpham > article > .danhsachsanpham > .tieude {
+                background: url(../images/title-bg.png);
+                background-repeat: repeat-x;
+                height: 1em;
+                text-align: center;
+            }
+
+                .trangsanpham > article > .danhsachsanpham > .tieude > p {
+                    z-index: 2;
+                    display: inline-block;
+                    margin: -0.5em 0 0;
+                    background: rgb(255,255,255);
+                    text-transform: uppercase;
+                    font-size: 1.8em;
+                    padding: 0 0.5em;
+                }
+
+                .trangsanpham > article > .danhsachsanpham > .tieude > a {
+                    position: absolute;
+                    z-index: 2;
+                    right: 0;
+                    margin: -0.5em auto 0;
+                    background: rgb(255,255,255);
+                    padding: 0 0.5em;
+                    font-size: 1.1em;
+                    color: rgb(150,150,150);
+                    transition: all .3s ease-in-out;
+                    text-decoration: none;
+                }
+
+                    .trangsanpham > article > .danhsachsanpham > .tieude > a:hover {
+                        color: rgb(41,41,41);
+                    }
+
+            /*Các sản phẩm*/
+            .trangsanpham > article > .danhsachsanpham > .cacsanpham {
+                margin: 2em 0;
+            }
+
+                /*Từng sản phẩm*/
+                .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham {
+                    padding: 0;
+                    text-align: center;
+                }
+
+                    .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > img {
+                        margin: 0 auto;
+                        display: block;
+                    }
+
+                    .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > .sale {
+                        position: absolute;
+                        top: 0em;
+                        left: 0.5em;
+                    }
+
+                    .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > p {
+                        text-align: center;
+                        font-weight: bold;
+                        color: rgb(33,150,243);
+                        margin: 0 0 1.5em 0;
+                    }
+
+                        /*Giá tiền*/
+                        .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > p > span {
+                            color: rgb(244,67,54);
+                            margin: 0 0.7em;
+                        }
+
+                        .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > p > .old {
+                            color: rgb(100,100,100);
+                            text-decoration: line-through;
+                        }
+
+                    /*Nút xem thêm*/
+                    .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > div {
+                        width: 100%;
+                    }
+
+                        .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > div > a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: rgb(150,150,150);
+                            border: solid 1px rgb(150,150,150);
+                            padding: 0.5em 1em;
+                            transition: all .2s ease-in-out;
+                        }
+
+                            .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > div > a:hover {
+                                color: rgb(41,41,41);
+                                border: solid 1px rgb(41,41,41);
+                            }
+
+/*Giao diện cho tablet (dọc)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .trangsanpham {
+        margin: 6em 0 2em 0;
+    }
+
+        /*Từng sản phẩm*/
+        .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham {
+            padding: 0 0 3em 0;
+        }
+}
+
+/*Giao diện cho điện thoại*/
+@media (max-width: 767px) {
+    .trangsanpham {
+        margin: 6em 0 1em 0;
+    }
+
+        .trangsanpham > article > .danhsachsanpham {
+            padding: 0;
+            margin: 0;
+        }
+
+            .trangsanpham > article > .danhsachsanpham > .tieude {
+                text-align: left;
+                padding: 0;
+            }
+
+            /*Từng sản phẩm*/
+            .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham {
+                padding: 0 0 3em 0;
+            }
+}

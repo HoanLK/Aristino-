@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Aristino";
+}
+
+<section class="trangchu col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="homeController">
+
+    <!--Banner-->
+    @Html.Partial("_Banner")
+
+    <!--Sologan-->
+    <div class="sologan hidden-xs col-sm-12 col-md-12 col-lg-12">
+        <img src="~/Content/Front/images/dichvu.png" alt="" />
+    </div>
+
+    <!--khuyến mãi nổi bật-->
+    <p ng-hide="kms.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật khuyến mại</p>
+    <article class="khuyenmainoibat col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="kms.length > 0">
+
+        <!--bài viết lớn bền trái (chỉ có ảnh dẫn link, k có tên bà viết)-->
+        <div class="left col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="(index, value) in kms" ng-show="index == 0">
+            <a href="/bai-viet/{{value.alias}}-{{value.idPost}}"><img ng-src="{{value.image}}" alt="{{value.title}}"/></a>
+        </div>
+
+        <!--Các bài viết bên phải (có cả ảnh và tên bài viết)-->
+        <div class="right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+            <!--2 thông tin bên trên-->
+            <div class="" ng-repeat="(index, value) in kms" ng-show="index > 0"  ng-class="{'up col-xs-12 col-sm-6 col-md-6 col-lg-6':(index < 3),'down col-xs-12 col-sm-12 col-md-12 col-lg-12':(index == 3)}">
+                <a href="/bai-viet/{{value.alias}}-{{value.idPost}}">
+                    <img src="{{value.image}}" alt="{{value.title}}" />
+                    <div><p>{{value.title}}</p></div>
+                </a>
+            </div>
+
+            <!--thông tin bên dưới-->
+            @*<div class="down col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a href="#">
+                    <img src="~/Content/Front/images/khuyenmainoibat-right-up.png" alt="" />
+                    <div><p>Special Couple Sale</p></div>
+                </a>
+            </div>*@
+        </div>
+    </article>
+
+    <!--Sản phẩm mới-->
+    <article class="sanphammoi col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Sản phẩm mới nhất</p>
+            <a href="/danh-muc-san-pham/tat-ca-san-pham">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <!--Các sản phẩm-->
+        <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Sản phẩm-->
+            <p ng-hide="spMois.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+            <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spMois">
+                <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                <p>
+                    {{value.title}} <br />
+                    <span>{{value.price | number:0}} đ</span>
+                </p>
+
+                <!--Nút mua hàng-->
+                <div>
+                    <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Sản phẩm nổi bật-->
+    <article class="sanphamnoibat col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Sản phẩm nổi bật</p>
+            <a href="/danh-muc-san-pham/tat-ca-san-pham">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <!--Các sản phẩm-->
+        <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!--Sản phẩm-->
+            <p ng-hide="spNoiBats.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+            <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spNoiBats">
+                <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                <p>
+                    {{value.title}} <br />
+                    <span>{{value.price | number:0}} đ</span>
+                </p>
+
+                <!--Nút mua hàng-->
+                <div>
+                    <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Bộ sưu tập-->
+    <article class="bosutap col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Ảnh đại diện-->
+        <img src="~/Content/Front/images/boosuutap.png" alt="" class="col-xs-12 col col-sm-5 col-md-8 col-lg-8 pull-right" />
+
+        <!--Thông tin-->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left">
+            <p>
+                <span>ARISTINO COLLECTION</span><br />
+                Cùng khám phá những bộ sưu tập lịch lãm, quý phái và vô cùng đặc sắc của Aristino Hải Phòng.
+            </p>
+
+            <!--Nút xem thêm-->
+            <a href="/danh-muc-bai-viet/bo-suu-tap-2">Xem thêm</a>
+        </div>
+    </article>
+
+    <!--Gift for men-->
+    <article class="giftformen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <p>
+            <span>GIFTS FOR MEN</span><br />
+            Những món quà đầy ý nghĩa và sang trọng dành cho người đàn ông lịch lãm
+        </p>
+
+        <!--Các tabs-->
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab">ARISTINO PROFRESSIONAL</a></li>
+                <li role="presentation" style="margin-left: 5%; margin-right: 5%;"><a href="#care" aria-controls="care" role="tab" data-toggle="tab">ARISTINO CARE</a></li>
+                <li role="presentation"><a href="#card" aria-controls="card" role="tab" data-toggle="tab">ARISTINO GIFT CARD</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="pro">
+
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p ng-hide="giftForMens1.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                        <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in giftForMens1" ng-show="giftForMens1.length > 0">
+                            <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                            <p>
+                                {{value.title}} <br />
+                                <span>{{value.price | number:0}} đ</span>
+                            </p>
+
+                            <!--Nút mua hàng-->
+                            <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="/danh-muc-san-pham/gift-for-men">Xem thêm</a>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="care">
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p ng-hide="giftForMens2.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                        <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in giftForMens2" ng-show="giftForMens2.length > 0">
+                            <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                            <p>
+                                {{value.title}} <br />
+                                <span>{{value.price | number:0}} đ</span>
+                            </p>
+
+                            <!--Nút mua hàng-->
+                            <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="@Url.Action("GiftForMen","Home")">Xem thêm</a>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="card">
+                    <div class="cacsanpham col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p ng-hide="giftForMens3.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
+                        <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in giftForMens3" ng-show="giftForMens3.length > 0">
+                            <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                            <p>
+                                {{value.title}} <br />
+                                <span>{{value.price | number:0}} đ</span>
+                            </p>
+
+                            <!--Nút mua hàng-->
+                            <a href="/san-pham/{{value.alias}}-{{value.idProduct}}">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <!--Nút xem thêm-->
+                    <a href="@Url.Action("GiftForMen","Home")">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--Tin tức nổi bật (aristino 360)-->
+    <article class="tintucnoibat col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!--Tiêu đề-->
+        <div class="tieude col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Tin tức nổi bật</p>
+            <a href="/danh-muc-bai-viet/aristino-360">xem thêm <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+
+        <p ng-hide="aristino360s.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật tin tức</p>
+        <div class="cactintuc col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="aristino360s.length > 0">
+
+            <div class="left col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-repeat="(index, value) in aristino360s" ng-show="index == 0">
+                <a href="/bai-viet/{{value.alias}}-{{value.idPost}}">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                    <p class="tieude">{{value.title}}</p>
+                    <p class="mota">{{value.escription}}</p>
+                </a>
+            </div>
+
+            <div class="right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="baiviet col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="(index, value) in aristino360s" ng-show="index > 0">
+                    <img ng-src="{{value.image}}" alt="{{value.title}}" class="pull-left" />
+                    <div class="thongtin pull-right">
+                        <p class="tieude">{{value.title}}</p>
+                        <p class="mota">
+                            {{value.escription}}
+                            <a href="/bai-viet/{{value.alias}}-{{value.idPost}}" class="xemthem">Xem thêm</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
