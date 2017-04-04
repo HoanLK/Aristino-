@@ -11,10 +11,10 @@
         <EntityTypeShape EntityType="AristinoModel.Contact" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="AristinoModel.Order" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="AristinoModel.Post" Width="1.5" PointX="2.75" PointY="7.75" />
-        <EntityTypeShape EntityType="AristinoModel.Product" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="AristinoModel.Product" Width="1.5" PointX="8.75" PointY="3.75" />
         <EntityTypeShape EntityType="AristinoModel.User" Width="1.5" PointX="7" PointY="0.875" />
-        <EntityTypeShape EntityType="AristinoModel.webpages_Membership" Width="1.5" PointX="6.75" PointY="7.75" />
-        <EntityTypeShape EntityType="AristinoModel.webpages_OAuthMembership" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AristinoModel.webpages_Membership" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AristinoModel.webpages_OAuthMembership" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="AristinoModel.webpages_Roles" Width="1.5" PointX="4.75" PointY="0.875" />
         <AssociationConnector Association="AristinoModel.FK_Category_Category" />
         <AssociationConnector Association="AristinoModel.FK_CategoryProduct_CategoryProduct" />

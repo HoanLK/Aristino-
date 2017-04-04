@@ -57,7 +57,7 @@
             <!--Sản phẩm-->
             <p ng-hide="spMois.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
             <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spMois">
-                <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                <img ng-src="{{value.image}}" alt="{{value.title}}" class="img-responsive"/>
                 <p>
                     {{value.title}} <br />
                     <span>{{value.price | number:0}} đ</span>
@@ -86,7 +86,7 @@
             <!--Sản phẩm-->
             <p ng-hide="spNoiBats.length > 0" style="font-size: 3em;color: #f44336; text-align:center">Đang cập nhật</p>
             <div class="sanpham col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="(index, value) in spNoiBats">
-                <img ng-src="{{value.image}}" alt="{{value.title}}" />
+                <img ng-src="{{value.image}}" alt="{{value.title}}" class="img-responsive"/>
                 <p>
                     {{value.title}} <br />
                     <span>{{value.price | number:0}} đ</span>

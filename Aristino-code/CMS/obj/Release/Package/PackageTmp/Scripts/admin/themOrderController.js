@@ -20,7 +20,11 @@
                     email: data.email,
                     sanPham: data.sanPham,
                     soLuong: data.soLuong,
+                    kichThuoc: data.kichThuoc,
+                    gia: data.gia,
+                    giaSP: data.giaSP,
                     idProduct: data.idProduct,
+                    checked: data.checked,
                 };
 
                 $http.get('/API/ProductsAPI/' + $scope.Order.idProduct)

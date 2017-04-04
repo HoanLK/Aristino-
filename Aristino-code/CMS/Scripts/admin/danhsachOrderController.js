@@ -44,12 +44,17 @@
         },
         {
             displayName: "Email",
-            name: 'tour',
+            name: 'email',
             enableSorting: false
         },
         {
-            displayName: "Ngày khởi hành",
-            name: 'timeStart',
+            displayName: "Số lượng",
+            name: 'soLuong',
+            enableSorting: false
+        },
+        {
+            displayName: "Giá",
+            name: 'gia',
             enableSorting: false
         },
         {
@@ -110,6 +115,10 @@
                 email: data.email,
                 sanPham: data.sanPham,
                 soLuong: data.soLuong,
+                kichThuoc: data.kichThuoc,
+                gia: data.gia,
+                giaSP: data.giaSP,
+                idProduct:data.idProduct,
                 checked: 1,
             }
             $http.put('/API/OrderAPI/' + id, $scope.Order)

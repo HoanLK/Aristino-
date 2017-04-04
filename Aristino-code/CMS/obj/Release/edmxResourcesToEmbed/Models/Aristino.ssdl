@@ -83,8 +83,11 @@
     <Property Name="SDT" Type="nchar" MaxLength="15" Nullable="false" />
     <Property Name="email" Type="nchar" MaxLength="50" />
     <Property Name="sanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="kichThuoc" Type="nchar" MaxLength="10" />
     <Property Name="soLuong" Type="int" />
     <Property Name="gia" Type="float" />
+    <Property Name="giaSP" Type="float" />
+    <Property Name="idProduct" Type="int" />
     <Property Name="checked" Type="int" />
   </EntityType>
   <EntityType Name="Post">

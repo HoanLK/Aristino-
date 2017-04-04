@@ -38,6 +38,7 @@
                 .trangloaisanpham > article > .cacsanpham > .sanpham > img {
                     margin: 0 auto;
                     display: block;
+                    width:100%;
                 }
 
                 .trangloaisanpham > article > .cacsanpham > .sanpham > .sale {

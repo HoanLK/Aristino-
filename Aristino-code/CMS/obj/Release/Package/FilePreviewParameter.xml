@@ -4,10 +4,10 @@
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Project\\KNT\\Aristino-\\Aristino-code\\CMS\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Project\\KNT\\Aristino-\\Aristino-code\\CMS\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="AristinoEntities-Web.config Connection String" description="" value="metadata=res://*/Models.Aristino.csdl|res://*/Models.Aristino.ssdl|res://*/Models.Aristino.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DELL\SQL2008;initial catalog=Aristino;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+  <parameter name="AristinoEntities-Web.config Connection String" description="" value="metadata=res://*/Models.Aristino.csdl|res://*/Models.Aristino.ssdl|res://*/Models.Aristino.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DELL1\SQL2012;initial catalog=myowebco_Aristino;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\Project\\KNT\\Aristino-\\Aristino-code\\CMS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AristinoEntities']/@connectionString" />
   </parameter>
-  <parameter name="CMS-Web.config Connection String" description="" value="data source=DELL\SQL2008;initial catalog=Aristino;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="">
+  <parameter name="CMS-Web.config Connection String" description="" value="data source=DELL1\SQL2012;initial catalog=myowebco_Aristino;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\Project\\KNT\\Aristino-\\Aristino-code\\CMS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CMS']/@connectionString" />
   </parameter>
 </parameters>

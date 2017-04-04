@@ -1,3 +1,3 @@
 ﻿User-agent: *
 Disallow: 
-Sitemap: .../sitemap.xml
+Sitemap: http://aristinohaiphong.com/sitemap.xml

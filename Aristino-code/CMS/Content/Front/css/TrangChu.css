@@ -160,6 +160,7 @@
                 .trangchu > .sanphamnoibat > .cacsanpham > .sanpham > img, .trangchu > .sanphammoi > .cacsanpham > .sanpham > img {
                     margin: 0 auto;
                     display: block;
+                    width:100%;
                 }
 
                 .trangchu > .sanphamnoibat > .cacsanpham > .sanpham > p, .trangchu > .sanphammoi > .cacsanpham > .sanpham > p {

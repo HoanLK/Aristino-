@@ -62,6 +62,7 @@
                     .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > img {
                         margin: 0 auto;
                         display: block;
+                        width: 100%;
                     }
 
                     .trangsanpham > article > .danhsachsanpham > .cacsanpham > .sanpham > .sale {

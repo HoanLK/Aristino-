@@ -82,8 +82,11 @@
       <EntityTypeMapping TypeName="AristinoModel.Order">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="checked" ColumnName="checked" />
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+          <ScalarProperty Name="giaSP" ColumnName="giaSP" />
           <ScalarProperty Name="gia" ColumnName="gia" />
           <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="kichThuoc" ColumnName="kichThuoc" />
           <ScalarProperty Name="sanPham" ColumnName="sanPham" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />

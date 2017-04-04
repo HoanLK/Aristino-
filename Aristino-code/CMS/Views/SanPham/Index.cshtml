@@ -17,13 +17,13 @@
                     <img ng-src="{{product.image}}" alt="{{product.title}}" />
                 </div>
                 @*<div class="sub col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    @for (int i = 0; i < 3; i++)
-                    {
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <img src="~/Content/images/sanphamnoibat.png" alt="" />
-                        </div>
-                    }
-                </div>*@
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img src="~/Content/images/sanphamnoibat.png" alt="" />
+                            </div>
+                        }
+                    </div>*@
             </div>
 
             <!--Thông tin sản phẩm-->
@@ -35,25 +35,103 @@
                 <p class="mota">{{product.description}}</p>
 
                 <!--Chọn size-->
-                <div class="size">
-                    <p>Chọn size:</p>
-                    <ul>
-                        <li><a href="#">S</a></li>
-                        <li><a href="#">M</a></li>
-                        <li><a href="#">L</a></li>
-                        <li><a href="#">XL</a></li>
-                    </ul>
-                </div>
+                @if (Model.idCategoryProduct == 4 || Model.idCategoryProduct == 11 || Model.idCategoryProduct == 12)
+                {
+                    <div class="size">
+                        <p>Chọn size:</p>
+                        <ul>
+                            <li><a href="#" ng-click="size38()" ng-class="{ 'btn btn-info': order.kichThuoc == '38' }">38</a></li>
+                            <li><a href="#" ng-click="size39()" ng-class="{ 'btn btn-info': order.kichThuoc == '39' }">39</a></li>
+                            <li><a href="#" ng-click="size40()" ng-class="{ 'btn btn-info': order.kichThuoc == '40' }">40</a></li>
+                            <li><a href="#" ng-click="size41()" ng-class="{ 'btn btn-info': order.kichThuoc == '41' }">41</a></li>
+                            <li><a href="#" ng-click="size42()" ng-class="{ 'btn btn-info': order.kichThuoc == '42' }">42</a></li>
+                            <li><a href="#" ng-click="size43()" ng-class="{ 'btn btn-info': order.kichThuoc == '43' }">43</a></li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <div class="size">
+                        <p>Chọn size:</p>
+                        <ul>
+                            <li><a href="#" ng-click="sizeS()" ng-class="{ 'btn btn-info': order.kichThuoc == 'S' }">S</a></li>
+                            <li><a href="#" ng-click="sizeM()" ng-class="{ 'btn btn-info': order.kichThuoc == 'M' }">M</a></li>
+                            <li><a href="#" ng-click="sizeL()" ng-class="{ 'btn btn-info': order.kichThuoc == 'L' }">L</a></li>
+                            <li><a href="#" ng-click="sizeXL()" ng-class="{ 'btn btn-info': order.kichThuoc == 'XL' }">XL</a></li>
+                            <li><a href="#" ng-click="sizeXXL()" ng-class="{ 'btn btn-info': order.kichThuoc == 'XXL' }">XXL</a></li>
+                        </ul>
+                    </div>
+                }
 
                 <!--Chọn số lượng-->
                 <div class="soluong">
                     <p>Số lượng:</p>
-                    <input type="number" value="" />
+                    <input type="number" value="" ng-model="order.soLuong"/>
                 </div>
 
                 <!--Mua hàng-->
                 <div class="muahang">
-                    <a href="#">Mua hàng</a>
+                    <a href="#" data-toggle="modal" data-target="#myModal">Mua hàng</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Đặt hàng-->
+        <div id="myModal" class="modal fade" role="dialog">
+            <input type="hidden" value="@Model.idProduct" id="idProductCurrent" />
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:#109917">
+                        <button type="button" class="close" data-dismiss="modal" style="color:#fff; border:0;">&times;</button>
+                        <p class="modal-title" style="color:#fff;">Đặt sản phẩm @Model.title</p>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="form" role="form">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group  " style="display:flex">
+                                                    <label for="title" style="width:30%; float:left;">Họ tên</label>
+                                                    <input type="text" style="width:70%; float:right;" class="form-control" id="hoTen" name="hoTen" ng-model="order.hoTen">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group  " style="display:flex">
+                                                    <label for="title" style="width:30%; float:left;">Địa Chỉ</label>
+                                                    <input type="text" style="width:70%; float:right;" class="form-control" id="diaChi" name="diaChi" ng-model="order.diaChi">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group  " style="display:flex" ng-class="{'has-error':!order.SDT, 'has-success':order.SDT}">
+                                                    <label for="title" style="width:30%; float:left;">Số điện thoại *</label>
+                                                    <input type="text" style="width:70%; float:right;" class="form-control" id="SDT" name="SDT" ng-model="order.SDT">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group  " style="display:flex">
+                                                    <label for="title" style="width:30%; float:left;">Email</label>
+                                                    <input type="email" style="width:70%; float:right;" class="form-control" id="email" name="email" ng-model="order.email">
+                                                </div>
+                                            </div>
+                                            @*<div class="col-md-12">
+                                                <div class="form-group  " style="display:flex" ng-class="{'has-error':!order.sanPham, 'has-success':order.sanPham}">
+                                                    <label for="title" style="width:30%; float:left;">sản phẩm *</label>
+                                                    <input type="text" value="@Model.title" style="width:70%; float:right;" class="form-control" id="sanPham" name="sanPham" ng-model="order.sanPham" disabled>
+                                                </div>
+                                            </div>*@
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="SaveOrder()" style="border:0; background-color:#109917; color:#fff;">Đặt hàng</button>
+                        @*<button type="button" class="btn btn-block btn-sm ink-reaction btn-success" ng-click="saveorder()"><span class="fa fa-edit"></span> Lưu</button>*@
+                    </div>
                 </div>
             </div>
         </div>

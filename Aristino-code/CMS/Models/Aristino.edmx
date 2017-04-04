@@ -88,8 +88,11 @@
           <Property Name="SDT" Type="nchar" MaxLength="15" Nullable="false" />
           <Property Name="email" Type="nchar" MaxLength="50" />
           <Property Name="sanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="kichThuoc" Type="nchar" MaxLength="10" />
           <Property Name="soLuong" Type="int" />
           <Property Name="gia" Type="float" />
+          <Property Name="giaSP" Type="float" />
+          <Property Name="idProduct" Type="int" />
           <Property Name="checked" Type="int" />
         </EntityType>
         <EntityType Name="Post">
@@ -389,8 +392,11 @@
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="sanPham" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="kichThuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="soLuong" Type="Int32" />
           <Property Name="gia" Type="Double" />
+          <Property Name="giaSP" Type="Double" />
+          <Property Name="idProduct" Type="Int32" />
           <Property Name="checked" Type="Int32" />
         </EntityType>
         <EntityType Name="Post">
@@ -605,8 +611,11 @@
             <EntityTypeMapping TypeName="AristinoModel.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="checked" ColumnName="checked" />
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+                <ScalarProperty Name="giaSP" ColumnName="giaSP" />
                 <ScalarProperty Name="gia" ColumnName="gia" />
                 <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+                <ScalarProperty Name="kichThuoc" ColumnName="kichThuoc" />
                 <ScalarProperty Name="sanPham" ColumnName="sanPham" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />

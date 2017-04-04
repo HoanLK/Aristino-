@@ -20,8 +20,11 @@ namespace CMS.Models
         public string SDT { get; set; }
         public string email { get; set; }
         public string sanPham { get; set; }
+        public string kichThuoc { get; set; }
         public Nullable<int> soLuong { get; set; }
         public Nullable<double> gia { get; set; }
+        public Nullable<double> giaSP { get; set; }
+        public Nullable<int> idProduct { get; set; }
         public Nullable<int> @checked { get; set; }
     }
 }
