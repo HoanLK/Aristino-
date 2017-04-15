@@ -88,3 +88,9 @@ D:\Project\KNT\HoaBanCode\CMS\Content\Images\images\Banner\banner-bg-3.png|43847
 D:\Project\KNT\HoaBanCode\CMS\Content\Images\images\Hải đảo\avt-trongnuoc-4.png|254113
 D:\Project\KNT\HoaBanCode\CMS\Content\Images\images\Miền bắc\avt-tour-1.png|388665
 D:\Project\KNT\HoaBanCode\CMS\Content\Images\images\Miền bắc\avt-tour-2.png|122533
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\saleofproduct.png|10392
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\AoSoMi\khuyenmainoibat-right-up.png|25514
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\AoSoMi\sanphammoi.png|34593
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\Banner\km-1.png|162933
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\Banner\km-2.png|125784
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\files\banner.png|1531610
