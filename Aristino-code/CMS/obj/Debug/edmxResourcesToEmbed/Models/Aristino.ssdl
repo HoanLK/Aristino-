@@ -81,7 +81,7 @@
     <Property Name="hoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="diaChi" Type="nvarchar" MaxLength="100" />
     <Property Name="SDT" Type="nchar" MaxLength="15" Nullable="false" />
-    <Property Name="email" Type="nchar" MaxLength="50" />
+    <Property Name="email" Type="nchar" MaxLength="1000" />
     <Property Name="sanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="kichThuoc" Type="nchar" MaxLength="10" />
     <Property Name="soLuong" Type="int" />
@@ -145,6 +145,17 @@
     <Property Name="metakewords" Type="nvarchar(max)" />
     <Property Name="author" Type="nvarchar" MaxLength="50" />
     <Property Name="robots" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ThongKe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten" Type="nvarchar(max)" />
+    <Property Name="diaChi" Type="nvarchar(max)" />
+    <Property Name="SDT" Type="nchar" MaxLength="15" />
+    <Property Name="email" Type="nchar" MaxLength="1000" />
+    <Property Name="soLanMuaHang" Type="int" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -249,6 +260,7 @@
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongKe" EntityType="Self.ThongKe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />

@@ -94,3 +94,11 @@ D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\AoSoMi\sanphamm
 D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\Banner\km-1.png|162933
 D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\Banner\km-2.png|125784
 D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\files\banner.png|1531610
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Files\banner.png|3803
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\saleofproduct.png|3984
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\AoSoMi\khuyenmainoibat-right-up.png|5300
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\AoSoMi\sanphammoi.png|5154
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\Banner\km-1.png|3699
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\Banner\km-2.png|3908
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\_thumbs\Images\bo suu tap\xuan he 2017\ao polo\avata.png|3851
+D:\Project\KNT\Aristino-\Aristino-code\CMS\Content\Images\images\bo suu tap\xuan he 2017\ao polo\avata.png|136294

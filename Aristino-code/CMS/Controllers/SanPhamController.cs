@@ -16,7 +16,7 @@ namespace CMS.Controllers
         [Route]
         public ActionResult EnterNone()
         {
-            return Redirect("/tour");
+            return Redirect("/san-pham");
         }
 
         [Route("{alias}-{id:int}")]

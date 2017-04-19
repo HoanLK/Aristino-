@@ -86,7 +86,7 @@
           <Property Name="hoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="diaChi" Type="nvarchar" MaxLength="100" />
           <Property Name="SDT" Type="nchar" MaxLength="15" Nullable="false" />
-          <Property Name="email" Type="nchar" MaxLength="50" />
+          <Property Name="email" Type="nchar" MaxLength="1000" />
           <Property Name="sanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="kichThuoc" Type="nchar" MaxLength="10" />
           <Property Name="soLuong" Type="int" />
@@ -150,6 +150,17 @@
           <Property Name="metakewords" Type="nvarchar(max)" />
           <Property Name="author" Type="nvarchar" MaxLength="50" />
           <Property Name="robots" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ThongKe">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ten" Type="nvarchar(max)" />
+          <Property Name="diaChi" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nchar" MaxLength="15" />
+          <Property Name="email" Type="nchar" MaxLength="1000" />
+          <Property Name="soLanMuaHang" Type="int" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -254,6 +265,7 @@
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThongKe" EntityType="Self.ThongKe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />
@@ -288,6 +300,7 @@
           <EntitySet Name="Order" EntityType="AristinoModel.Order" />
           <EntitySet Name="Post" EntityType="AristinoModel.Post" />
           <EntitySet Name="Product" EntityType="AristinoModel.Product" />
+          <EntitySet Name="ThongKe" EntityType="AristinoModel.ThongKe" />
           <EntitySet Name="User" EntityType="AristinoModel.User" />
           <EntitySet Name="webpages_Membership" EntityType="AristinoModel.webpages_Membership" />
           <EntitySet Name="webpages_OAuthMembership" EntityType="AristinoModel.webpages_OAuthMembership" />
@@ -390,7 +403,7 @@
           <Property Name="hoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="diaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
           <Property Name="sanPham" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="kichThuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="soLuong" Type="Int32" />
@@ -454,6 +467,17 @@
           <Property Name="metakewords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="robots" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ThongKe">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ten" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="diaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+          <Property Name="soLanMuaHang" Type="Int32" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -680,6 +704,18 @@
                 <ScalarProperty Name="idUserCreated" ColumnName="idUserCreated" />
                 <ScalarProperty Name="idCategoryProduct" ColumnName="idCategoryProduct" />
                 <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThongKe">
+            <EntityTypeMapping TypeName="AristinoModel.ThongKe">
+              <MappingFragment StoreEntitySet="ThongKe">
+                <ScalarProperty Name="soLanMuaHang" ColumnName="soLanMuaHang" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

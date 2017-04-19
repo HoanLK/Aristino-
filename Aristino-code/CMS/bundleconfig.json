@@ -670,5 +670,17 @@
     "inputFiles": [
       "Content/Front/js/Menu-Mobile.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/admin/danhsachThongKeController.min.js",
+    "inputFiles": [
+      "Scripts/admin/danhsachThongKeController.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/admin/themThongKeController.min.js",
+    "inputFiles": [
+      "Scripts/admin/themThongKeController.js"
+    ]
   }
 ]

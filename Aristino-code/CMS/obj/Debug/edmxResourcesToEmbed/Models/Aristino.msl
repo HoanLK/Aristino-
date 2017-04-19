@@ -154,6 +154,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ThongKe">
+      <EntityTypeMapping TypeName="AristinoModel.ThongKe">
+        <MappingFragment StoreEntitySet="ThongKe">
+          <ScalarProperty Name="soLanMuaHang" ColumnName="soLanMuaHang" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="AristinoModel.User">
         <MappingFragment StoreEntitySet="User">

@@ -209,6 +209,8 @@
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsAPIController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongKeAPIController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongKesController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\BaiVietController.cs" />
@@ -286,6 +288,9 @@
       <DependentUpon>Aristino.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
+      <DependentUpon>Aristino.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThongKe.cs">
       <DependentUpon>Aristino.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
@@ -2603,6 +2608,10 @@
     <Content Include="Scripts\admin\danhsachProductController.min.js">
       <DependentUpon>danhsachProductController.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\admin\danhsachThongKeController.js" />
+    <Content Include="Scripts\admin\danhsachThongKeController.min.js">
+      <DependentUpon>danhsachThongKeController.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\admin\danhsachVideoController.min.js">
       <DependentUpon>danhsachVideoController.js</DependentUpon>
     </Content>
@@ -2641,6 +2650,10 @@
     </Content>
     <Content Include="Scripts\admin\themProductController.min.js">
       <DependentUpon>themProductController.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\admin\themThongKeController.js" />
+    <Content Include="Scripts\admin\themThongKeController.min.js">
+      <DependentUpon>themThongKeController.js</DependentUpon>
     </Content>
     <Content Include="Scripts\admin\themVideoController.min.js">
       <DependentUpon>themVideoController.js</DependentUpon>
@@ -3089,6 +3102,8 @@
     <Content Include="bower_components\angular\bower.json" />
     <Content Include="bower_components\angular\package.json" />
     <Content Include="bower_components\angular\README.md" />
+    <Content Include="Areas\Admin\Views\ThongKes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongKes\Index.cshtml" />
     <None Include="bundleconfig.json" />
     <EntityDeploy Include="Models\Aristino.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CMS.Models.ThongKe>
+
+@{
+    ViewBag.Title = "Thống kê khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-app="myApp">
+    <div ng-controller="danhsachThongKeController">
+
+        <div class="card">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ui-grid-selection ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns ui-grid="gridOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

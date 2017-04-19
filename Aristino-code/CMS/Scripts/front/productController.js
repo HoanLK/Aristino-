@@ -4,6 +4,8 @@
     $scope.idCategoryProduct;
     $scope.idProduct = angular.element('#idProduct').val();
     $scope.order = {};
+    $scope.thongKe = {};
+    $scope.loadThongKe = {};
 
     $http.get('/API/ProductsAPI/' + $scope.idProduct)
         .success(function (data) {
@@ -37,6 +39,26 @@
         .error(function () {
             toastr.error('Thất bại', 'Đặt hàng');
         });
+        $http.get('/API/ThongKeAPI?value=' + $scope.order.SDT)
+            .success(function (data) {
+                //Tăng số lần mua nếu có
+                $scope.thongKe.id = data.id;
+                $scope.thongKe.ten = $scope.order.hoTen;
+                $scope.thongKe.diaChi = data.diaChi;
+                $scope.thongKe.SDT = data.SDT;
+                $scope.thongKe.email = data.email;
+                $scope.thongKe.soLanMuaHang = data.soLanMuaHang + 1;
+                $http.put('/API/ThongKeAPI/' + $scope.thongKe.id, $scope.thongKe)
+            })
+            .error(function () {
+                //Thêm mới nếu chưa có
+                $scope.thongKe.ten = $scope.order.hoTen;
+                $scope.thongKe.diaChi = $scope.order.diaChi;
+                $scope.thongKe.SDT = $scope.order.SDT;
+                $scope.thongKe.email = $scope.order.email;
+                $scope.thongKe.soLanMuaHang = 1;
+                $http.post('/API/ThongKeAPI/', $scope.thongKe)
+            });
     }
 
     $scope.size38 = function () {
